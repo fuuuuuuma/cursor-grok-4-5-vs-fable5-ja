@@ -180,6 +180,8 @@ A. Grok 4.5は Cursorの全プラン（desktop・web・iOS・CLI・SDK）で利�
 
 **受け取りページ**: https://fuuuuuuma.github.io/cursor-grok-4-5-vs-fable5-ja/present.html
 
+**🎟️ まだCursorを使っていない方へ**: この招待リンクから始められます → https://cursor.com/referral?code=3NTLANHAW3F5
+
 | プレゼント | 中身 | 受け取り方 |
 |---|---|---|
 | Cursorで使えるプロンプト100選 | カテゴリ別・そのまま貼れる実用プロンプト100本 | [present.html](https://fuuuuuuma.github.io/cursor-grok-4-5-vs-fable5-ja/present.html) ／ [kit/prompts-100.md](./kit/prompts-100.md) |

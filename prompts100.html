@@ -1,0 +1,695 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>🎁 Cursorで使えるプロンプト100選</title><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet"><style>
+:root{
+  --brand:#D9774F; --brand-deep:#C15640; --brand-soft:rgba(217,119,79,.12); --brand-line:rgba(217,119,79,.30);
+  --accent:#D9774F; --accent-deep:#B24E33; --accent-soft:rgba(217,119,79,.16);
+  --bg:#F1ECE3; --paper:#FBF8F2; --ink:#2A2620; --ink-mid:#6E6557; --line:#E4D9C7;
+  --head:'M PLUS Rounded 1c';
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans JP',-apple-system,'Hiragino Sans','Yu Gothic',sans-serif;line-height:1.7;}
+.doc{max-width:900px;margin:0 auto;background:var(--paper);box-shadow:0 0 60px rgba(0,0,0,.10);min-height:100vh;}
+.hero{position:relative;background:linear-gradient(160deg,var(--brand-soft) 0%,var(--bg) 70%);padding:40px 46px 32px;border-bottom:3px solid var(--brand-line);overflow:hidden;}
+.hero .coin{position:absolute;width:150px;height:150px;border-radius:50%;background:var(--accent);opacity:.15;top:-50px;right:-30px;}
+.chan{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.eyebrow{font-family:var(--head);font-weight:800;color:var(--brand-deep);letter-spacing:2px;font-size:12px;display:inline-block;margin-bottom:8px;}
+h1{font-family:var(--head);font-weight:800;font-size:30px;line-height:1.28;color:var(--ink);}
+h1 .hl{color:var(--brand-deep);}
+.hero p.sub{font-size:15px;color:var(--ink-mid);font-weight:700;margin-top:10px;max-width:680px;}
+.back{display:inline-block;margin-top:14px;font-size:13px;font-weight:700;color:var(--brand-deep);text-decoration:none;background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:6px 16px;}
+.back:hover{border-color:var(--brand);}
+.navbar{position:sticky;top:0;z-index:5;background:var(--brand-soft);border-bottom:1px solid var(--line);padding:12px 46px;display:flex;flex-wrap:wrap;gap:7px;}
+.navbar a{font-size:12px;font-weight:700;color:var(--ink);text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 12px;}
+.navbar a:hover{border-color:var(--brand);}
+.toolbar{padding:16px 46px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--line);}
+.count{font-family:var(--head);font-weight:800;color:var(--brand-deep);font-size:15px;}
+.cat{padding:26px 46px 8px;}
+.cat h2{font-family:var(--head);font-weight:800;font-size:21px;color:var(--ink);border-left:5px solid var(--accent);padding-left:12px;}
+.icards{padding:6px 46px 20px;display:flex;flex-direction:column;gap:14px;}
+.icard{background:var(--bg);border:1.5px solid var(--line);border-radius:13px;padding:16px 18px;}
+.ititle{font-family:var(--head);font-weight:800;font-size:16px;color:var(--ink);margin-bottom:4px;}
+.imeta{font-size:12.5px;color:var(--ink-mid);margin-bottom:10px;}
+pre.prompt{background:var(--ink);color:#ECECEA;border-radius:10px;padding:14px 16px;white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,Menlo,monospace;font-size:13px;line-height:1.6;max-height:340px;overflow-y:auto;}
+.btns{margin-top:10px;display:flex;gap:9px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:7px;background:var(--accent);border:2px solid var(--accent-deep);color:var(--ink);border-radius:999px;padding:8px 18px;font-family:var(--head);font-weight:800;font-size:13px;cursor:pointer;text-decoration:none;}
+.btn.ghost{background:var(--paper);border:1.5px solid var(--line);color:var(--brand-deep);}
+.btn.lg{font-size:15px;padding:11px 26px;}
+.linkcards{padding:8px 46px 30px;display:flex;flex-direction:column;gap:14px;}
+.linkcard{border:1.5px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--bg);}
+.linkcard.accent{border:2px solid var(--brand);background:var(--paper);}
+.linkcard .lt{flex:1;}
+.linkcard .lt b{font-family:var(--head);font-weight:800;font-size:17px;color:var(--ink);display:block;}
+.linkcard .lt span{font-size:13px;color:var(--ink-mid);}
+.linkcard .cnt{font-family:var(--head);font-weight:800;color:var(--accent-deep);background:var(--accent-soft);border-radius:999px;padding:4px 12px;font-size:13px;white-space:nowrap;}
+section.info{padding:28px 46px;border-top:1px solid var(--line);}
+section.info h2{font-family:var(--head);font-weight:800;font-size:20px;color:var(--ink);margin-bottom:12px;}
+section.info ol{margin-left:20px;font-size:15px;color:var(--ink);} section.info li{margin-bottom:7px;}
+.box{background:var(--accent-soft);border:1.5px solid var(--accent);border-radius:12px;padding:16px 20px;margin-top:14px;}
+.box b{color:var(--brand-deep);}
+footer{background:var(--ink);color:#EBEBE7;padding:26px 46px;font-size:12.5px;line-height:1.8;}
+footer a{color:var(--accent);text-decoration:none;}
+</style></head>
+<body><div class="doc"><div class="hero"><span class="coin"></span><div class="chan"><img src="data:image/jpeg;base64,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" alt="ClaudeCode" style="width:46px;height:46px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.16);"></div><div class="eyebrow">PRESENT KIT</div><h1>🎁 <span class="hl">Cursorで使えるプロンプト100選</span></h1><p class="sub">Cursorのチャット・Agentにそのまま貼って使える実用プロンプト。@でファイルを指定すると精度が上がります。</p><a class="back" href="./present.html">← プレゼント一覧に戻る</a></div>
+<div class="navbar"><a href="#ppc1">1. コード生成・実装</a><a href="#ppc2">2. リファクタリング</a><a href="#ppc3">3. デバッグ・エラー解決</a><a href="#ppc4">4. テスト作成</a><a href="#ppc5">5. コードレビュー・品質</a><a href="#ppc6">6. ドキュメント・コメント</a><a href="#ppc7">7. 設計・アーキテクチャ</a><a href="#ppc8">8. 学習・コード理解</a><a href="#ppc9">9. Git・PR・運用</a><a href="#ppc10">10. 生産性・自動化(Agent/MCP活用)</a></div><div class="toolbar"><span class="count">全100本収録</span><button class="btn ghost" onclick="downloadText('ppfull','cursor-prompts-100.md', this)">⬇ 全件まとめてダウンロード（.md）</button></div>
+<div class="cat" id="ppc1"><h2>1. コード生成・実装</h2></div><div class="icards"><div class="icard"><div class="ititle">1. ゼロから小さな機能を作る</div><div class="imeta">対象: 初心者 ｜ 場面: ゼロから小さな機能を作りたいとき</div><pre class="prompt" id="pp1">@folder src を参照して、このプロジェクトの命名規則とディレクトリ構成に合わせた形で、ユーザーのメールアドレスを検証する関数を実装してください。TypeScriptの型を明示し、正規表現ではなく既存のバリデーションライブラリがあればそれを使ってください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp1', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">2. 既存コンポーネントに合わせて新規UIを作る</div><div class="imeta">対象: 初心者 ｜ 場面: フォームのUIコンポーネントを作るとき</div><pre class="prompt" id="pp2">@file src/components/Button.tsx のスタイルとpropsの書き方を参考にして、同じデザインパターンでテキスト入力用のInputコンポーネントを新規作成してください。エラーメッセージ表示用のpropも用意してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp2', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">3. 既存APIに合わせて新規エンドポイントを追加する</div><div class="imeta">対象: 初心者 ｜ 場面: APIエンドポイントを追加したいとき</div><pre class="prompt" id="pp3">@folder src/api を見て、既存のエンドポイントと同じ書き方でユーザー情報を取得するGET /users/:idのエンドポイントを追加してください。認証ミドルウェアが必要なら既存のものを流用してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp3', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">4. 既存機能にオプションを追加する</div><div class="imeta">対象: 中級 ｜ 場面: 既存機能に新しい選択肢を追加するとき</div><pre class="prompt" id="pp4">@file src/utils/formatDate.ts の実装を見て、日付フォーマットに「相対時間表示（3分前、1時間前など）」のオプションを追加してください。既存の呼び出し箇所を壊さないよう、デフォルト引数で後方互換性を保ってください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp4', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">5. 外部API連携処理を書く</div><div class="imeta">対象: 中級 ｜ 場面: 外部APIとの連携処理を書くとき</div><pre class="prompt" id="pp5">Stripeの決済APIを使って、サブスクリプションのキャンセル処理を実装してください。@docs でStripeの公式ドキュメントを参照し、エラー時のリトライとログ出力も含めてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp5', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">6. 状態管理ロジックを追加する</div><div class="imeta">対象: 中級 ｜ 場面: 状態管理のロジックを追加するとき</div><pre class="prompt" id="pp6">@file src/store/cartStore.ts の既存のZustandストアの構造に合わせて、クーポンコードの適用状態を管理するスライスを追加してください。合計金額の再計算ロジックも含めてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp6', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">7. 大量データでも重くならない実装にする</div><div class="imeta">対象: 上級 ｜ 場面: パフォーマンスを意識した実装が必要なとき</div><pre class="prompt" id="pp7">@file src/components/DataTable.tsx を見て、1万行以上のデータを表示しても描画が遅くならないよう、仮想スクロール（virtualization）を導入した実装に書き換えてください。react-windowなど軽量なライブラリを使い、既存のソート・フィルタ機能は維持してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp7', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">8. Plan modeで複数ファイルの機能を実装する</div><div class="imeta">対象: 上級 ｜ 場面: 複数ファイルにまたがる機能を一気に実装したいとき</div><pre class="prompt" id="pp8">Plan modeで進めてください。要件: ユーザーが画像をアップロードしてサムネイルを自動生成する機能。@folder src を参照し、必要なAPI・ストレージ処理・フロントのアップロードUIまでの実装計画を先に提示し、承認後に着手してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp8', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">9. 既存フックのスタイルを踏襲して新規フックを作る</div><div class="imeta">対象: 中級 ｜ 場面: 既存コードのスタイルを踏襲して新規ファイルを作るとき</div><pre class="prompt" id="pp9">@file src/hooks/useAuth.ts のフックの書き方（命名・エラーハンドリング・返り値の形）と同じスタイルで、ローカルストレージの値を型安全に読み書きするuseLocalStorageフックを作成してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp9', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">10. 複雑な条件分岐を含む料金ロジックを実装する</div><div class="imeta">対象: 上級 ｜ 場面: 複雑な条件分岐を含むビジネスロジックを実装するとき</div><pre class="prompt" id="pp10">@file src/domain/pricing.ts を参照し、会員ランク・クーポン・キャンペーン期間が重なった場合の割引計算ロジックを実装してください。優先順位のルールは@file docs/pricing-rules.md に記載の通りとし、判定不能なケースは例外を投げるようにしてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp10', this)">📋 コピー</button></div></div></div><div class="cat" id="ppc2"><h2>2. リファクタリング</h2></div><div class="icards"><div class="icard"><div class="ititle">11. 長すぎる関数を分割する</div><div class="imeta">対象: 初心者 ｜ 場面: 長すぎる関数を整理したいとき</div><pre class="prompt" id="pp11">@file src/utils/checkout.ts のprocessOrder関数が150行以上あり読みにくいです。責務ごとに小さな関数へ分割してください。挙動は一切変えず、既存のテストが通ることを確認してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp11', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">12. 重複コードを共通化する</div><div class="imeta">対象: 初心者 ｜ 場面: 重複コードをまとめたいとき</div><pre class="prompt" id="pp12">@folder src/components 内で似たようなローディングスピナーの実装が3箇所にあります。共通コンポーネントとして1つに切り出し、各呼び出し箇所を置き換えてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp12', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">13. クラスコンポーネントを関数コンポーネントに移行する</div><div class="imeta">対象: 中級 ｜ 場面: クラスコンポーネントを関数コンポーネントに移行するとき</div><pre class="prompt" id="pp13">@file src/components/UserProfile.tsx のクラスコンポーネントを、Reactフックを使った関数コンポーネントに書き換えてください。ライフサイクルメソッドはuseEffectに対応させ、既存のpropsの型は変更しないでください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp13', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">14. ネストの深いif文を読みやすくする</div><div class="imeta">対象: 中級 ｜ 場面: ネストの深いif文を読みやすくしたいとき</div><pre class="prompt" id="pp14">@file src/services/validation.ts のvalidateForm関数はif文が5段階以上ネストしています。早期リターンやガード節を使ってネストを浅くし、ロジックの意味が一目で分かる形にしてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp14', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">15. マジックナンバーを定数化する</div><div class="imeta">対象: 中級 ｜ 場面: マジックナンバーや文字列を定数化したいとき</div><pre class="prompt" id="pp15">@file src/config/constants.ts を確認したうえで、@folder src 全体に散らばっているハードコードされたステータスコードやAPIパスを、定数として一箇所にまとめてください。呼び出し元は全てその定数を参照する形に置き換えてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp15', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">16. Strategyパターンを導入する</div><div class="imeta">対象: 上級 ｜ 場面: 特定のデザインパターンを導入したいとき</div><pre class="prompt" id="pp16">@file src/services/notificationService.ts は通知チャネル（メール・SMS・プッシュ）ごとにif分岐が増え続けています。Strategyパターンを導入して、新しいチャネルを追加する際にこのファイルを変更しなくて済む構造にリファクタリングしてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp16', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">17. any型を厳密な型に置き換える</div><div class="imeta">対象: 上級 ｜ 場面: 型の緩さを厳密にしたいとき</div><pre class="prompt" id="pp17">@folder src/types を確認し、anyやunknownが多用されている@file src/api/client.ts の型定義を厳密なものに置き換えてください。APIレスポンスの型はZodスキーマから推論する形にしてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp17', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">18. 巨大なページコンポーネントを分割する</div><div class="imeta">対象: 中級 ｜ 場面: 大きなコンポーネントを分割したいとき</div><pre class="prompt" id="pp18">@file src/pages/Dashboard.tsx が500行を超えています。データ取得ロジック・表示ロジック・レイアウトを分離し、責務ごとに小さなコンポーネントとカスタムフックへ分割してください。分割後の構成案を先に提示してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp18', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">19. 非同期処理の書き方を統一する</div><div class="imeta">対象: 上級 ｜ 場面: 非同期処理をモダンな書き方に統一したいとき</div><pre class="prompt" id="pp19">@folder src/api 内でコールバック形式とPromise形式とasync/awaitが混在しています。全てasync/awaitに統一し、エラーハンドリングの書き方も一貫させてください。挙動が変わる可能性がある箇所は変更前に指摘してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp19', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">20. 古い依存ライブラリを置き換える</div><div class="imeta">対象: 中級 ｜ 場面: 依存関係を減らしたいとき</div><pre class="prompt" id="pp20">@file package.json を確認し、moment.jsを使っている箇所を@folder src から洗い出して、既に依存しているdate-fnsに置き換えてください。タイムゾーンを扱っている箇所は特に注意して動作を確認してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp20', this)">📋 コピー</button></div></div></div><div class="cat" id="ppc3"><h2>3. デバッグ・エラー解決</h2></div><div class="icards"><div class="icard"><div class="ititle">21. エラーメッセージの意味を教えてもらう</div><div class="imeta">対象: 初心者 ｜ 場面: エラーメッセージの意味が分からないとき</div><pre class="prompt" id="pp21">このエラーが出て原因が分かりません。@file src/pages/Login.tsx とエラーログを見て、何が起きているか日本語で分かりやすく説明したうえで、修正案を提示してください。
+
+エラー内容:
+Cannot read properties of undefined (reading 'user')</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp21', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">22. 画面が真っ白になる不具合を直す</div><div class="imeta">対象: 初心者 ｜ 場面: 画面が真っ白になったとき</div><pre class="prompt" id="pp22">アプリを開くと画面が真っ白になり、コンソールにエラーが出ています。@folder src を確認し、どのコンポーネントで問題が起きているか特定してから、最小限の修正で直してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp22', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">23. 特定条件でのみ発生するバグを調べる</div><div class="imeta">対象: 中級 ｜ 場面: 特定の条件でだけ発生するバグを調べるとき</div><pre class="prompt" id="pp23">@file src/hooks/useCart.ts で、商品を連続で素早くクリックしたときだけ合計金額がずれる不具合があります。再現条件を整理したうえで、状態更新のタイミングに問題がないか調査し、修正してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp23', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">24. 非同期処理のバグを調べる</div><div class="imeta">対象: 中級 ｜ 場面: 非同期処理のバグを調べるとき</div><pre class="prompt" id="pp24">@file src/services/fetchUserData.ts で、複数のAPIリクエストを並列実行した際にたまにデータが取り違わる不具合が発生します。Race conditionの可能性を含めて原因を調査し、修正案を提示してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp24', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">25. 本番環境だけで起きるエラーを調査する</div><div class="imeta">対象: 中級 ｜ 場面: 本番環境だけで起きるエラーを調査するとき</div><pre class="prompt" id="pp25">開発環境では再現しませんが、本番環境だけで@file src/middleware/auth.ts 付近のエラーが発生しています。環境変数・ビルド設定・環境差分の観点から考えられる原因を@folder src と設定ファイルから洗い出してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp25', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">26. メモリリークを調査する</div><div class="imeta">対象: 上級 ｜ 場面: メモリリークを疑うとき</div><pre class="prompt" id="pp26">@file src/components/RealtimeChart.tsx を長時間表示しているとブラウザが重くなります。useEffectのクリーンアップ処理やイベントリスナーの解除漏れがないか確認し、メモリリークの原因になりそうな箇所を指摘して修正してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp26', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">27. ビルドエラーを解決する</div><div class="imeta">対象: 初心者 ｜ 場面: ビルドが通らないとき</div><pre class="prompt" id="pp27">npm run buildを実行するとエラーで失敗します。エラーログを貼るので、@file tsconfig.json と該当ファイルを確認して、原因と修正方法を教えてください。修正は最小限の変更で行ってください。
+
+（ここにビルドエラーのログを貼り付ける）</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp27', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">28. テスト失敗の原因を切り分ける</div><div class="imeta">対象: 中級 ｜ 場面: テストが通らない原因を調べるとき</div><pre class="prompt" id="pp28">@file src/utils/priceCalculator.test.ts のテストが失敗しています。テストの期待値が正しいのか、実装側にバグがあるのかをまず切り分けてから、原因箇所を特定して修正してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp28', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">29. パフォーマンス低下の原因を特定する</div><div class="imeta">対象: 上級 ｜ 場面: パフォーマンス低下の原因を特定するとき</div><pre class="prompt" id="pp29">@file src/pages/ProductList.tsx の一覧表示が重くなっています。不要な再レンダリングが起きていないか、useMemoやReact.memoの使いどころが適切かを調査し、ボトルネックになっている箇所を特定して改善してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp29', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">30. 環境差分によるバグを切り分ける</div><div class="imeta">対象: 中級 ｜ 場面: 環境差分によるバグを切り分けるとき</div><pre class="prompt" id="pp30">Node.jsのバージョンを上げてから@folder src の一部が動かなくなりました。@file package.json のdependenciesを確認し、非互換の可能性があるパッケージやAPIの使い方を洗い出してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp30', this)">📋 コピー</button></div></div></div><div class="cat" id="ppc4"><h2>4. テスト作成</h2></div><div class="icards"><div class="icard"><div class="ititle">31. 初めて単体テストを書く</div><div class="imeta">対象: 初心者 ｜ 場面: 初めて単体テストを書くとき</div><pre class="prompt" id="pp31">@file src/utils/formatCurrency.ts の関数に対する単体テストを書いてください。正常系だけでなく、0円やマイナス値、undefinedが渡された場合の異常系のケースも含めてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp31', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">32. テストが一つもない関数にテストを追加する</div><div class="imeta">対象: 初心者 ｜ 場面: 既存関数にテストがないとき</div><pre class="prompt" id="pp32">@file src/utils/validateEmail.ts にはテストが一つもありません。このプロジェクトで使われているテストフレームワークを確認したうえで、代表的なケースを網羅したテストを追加してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp32', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">33. コンポーネントのテストを書く</div><div class="imeta">対象: 中級 ｜ 場面: コンポーネントのテストを書くとき</div><pre class="prompt" id="pp33">@file src/components/LoginForm.tsx に対して、React Testing Libraryを使ったテストを作成してください。入力バリデーションの表示、送信ボタンの活性・非活性、送信成功時のコールバック呼び出しをそれぞれ検証してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp33', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">34. APIのモックを使ったテストを書く</div><div class="imeta">対象: 中級 ｜ 場面: APIのモックを使ったテストを書くとき</div><pre class="prompt" id="pp34">@file src/services/userApi.ts のAPI呼び出し部分について、実際の通信をせずにモック化したテストを書いてください。成功時・404エラー時・タイムアウト時のそれぞれの挙動を検証してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp34', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">35. E2Eテストのシナリオを設計する</div><div class="imeta">対象: 上級 ｜ 場面: E2Eテストのシナリオを設計するとき</div><pre class="prompt" id="pp35">ログインから商品購入完了までの一連の流れをカバーするE2Eテストを設計してください。@folder src/pages を参照し、Playwrightで実装し、途中でエラーが起きた場合にスクリーンショットが残る設定も加えてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp35', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">36. エッジケースの漏れを洗い出す</div><div class="imeta">対象: 中級 ｜ 場面: エッジケースの漏れを洗い出したいとき</div><pre class="prompt" id="pp36">@file src/utils/dateRange.ts の関数について、現状のテストでカバーされていないエッジケース（うるう年、月末、タイムゾーンをまたぐ日付など）を洗い出し、不足しているテストを追加してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp36', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">37. テストカバレッジを上げる</div><div class="imeta">対象: 中級 ｜ 場面: テストカバレッジを上げたいとき</div><pre class="prompt" id="pp37">@folder src/services のテストカバレッジレポートを確認し、カバレッジが低いファイルを優先順位付けしてください。上位3ファイルについて、重要度の高い分岐から順にテストを追加してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp37', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">38. 非同期処理を含むカスタムフックをテストする</div><div class="imeta">対象: 上級 ｜ 場面: 非同期処理を含む複雑な関数をテストするとき</div><pre class="prompt" id="pp38">@file src/hooks/useInfiniteScroll.ts のカスタムフックに対して、スクロール位置に応じたデータ追加読み込みの挙動をテストしてください。タイマーやIntersectionObserverはモック化し、意図しない無限ループが起きないことも検証してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp38', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">39. 不安定なテストを直す</div><div class="imeta">対象: 初心者 ｜ 場面: 壊れやすいテストを直したいとき</div><pre class="prompt" id="pp39">@file src/components/Notification.test.tsx のテストが実行するたびに成功したり失敗したりします。時間やランダム値に依存している箇所がないか確認し、安定して同じ結果になるように修正してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp39', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">40. スナップショットテストを整理する</div><div class="imeta">対象: 中級 ｜ 場面: スナップショットテストを整理したいとき</div><pre class="prompt" id="pp40">@folder src/components のスナップショットテストが更新のたびに大量に差分が出て、レビューが困難になっています。本当に検証すべき箇所を洗い出し、スナップショットではなく個別のアサーションに置き換えられる部分を提案してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp40', this)">📋 コピー</button></div></div></div><div class="cat" id="ppc5"><h2>5. コードレビュー・品質</h2></div><div class="icards"><div class="icard"><div class="ititle">41. コミット前に自分の変更をチェックする</div><div class="imeta">対象: 初心者 ｜ 場面: 自分の変更をコミット前にチェックしたいとき</div><pre class="prompt" id="pp41">git diffで表示される変更内容をレビューしてください。バグの可能性、命名の分かりにくさ、コメントが必要な箇所があれば指摘してください。指摘は修正案とセットで出してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp41', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">42. アップロード処理のセキュリティを確認する</div><div class="imeta">対象: 初心者 ｜ 場面: セキュリティ面が不安なとき</div><pre class="prompt" id="pp42">@file src/api/uploadFile.ts についてセキュリティの観点でレビューしてください。ファイルサイズやMIMEタイプの検証漏れ、パストラバーサルの可能性がないか確認してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp42', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">43. プルリクエスト全体をレビューする</div><div class="imeta">対象: 中級 ｜ 場面: プルリクエスト全体をレビューしてほしいとき</div><pre class="prompt" id="pp43">このプルリクエストの変更差分全体をレビューしてください。既存の設計方針との一貫性、テストの有無、エラーハンドリングの妥当性の3点を中心に確認し、優先度をつけて指摘してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp43', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">44. エラーハンドリングの漏れをチェックする</div><div class="imeta">対象: 中級 ｜ 場面: エラーハンドリングの漏れをチェックするとき</div><pre class="prompt" id="pp44">@folder src/api の全ファイルを確認し、try-catchで例外を握りつぶしている箇所や、エラーがユーザーに何も伝わらないまま失敗している箇所がないかチェックしてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp44', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">45. アクセシビリティの観点でレビューする</div><div class="imeta">対象: 上級 ｜ 場面: アクセシビリティの観点でレビューするとき</div><pre class="prompt" id="pp45">@file src/components/Modal.tsx をアクセシビリティの観点でレビューしてください。キーボード操作でのフォーカストラップ、aria属性の付与、スクリーンリーダーでの読み上げに問題がないか確認し、修正してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp45', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">46. N+1問題を探す</div><div class="imeta">対象: 中級 ｜ 場面: N+1問題など性能上の問題を探すとき</div><pre class="prompt" id="pp46">@folder src/repositories のデータベースアクセス部分を確認し、ループの中でクエリを発行しているN+1問題が起きていないかチェックしてください。見つかった箇所は一括取得に修正してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp46', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">47. コーディング規約への準拠を確認する</div><div class="imeta">対象: 中級 ｜ 場面: コーディング規約に沿っているか確認したいとき</div><pre class="prompt" id="pp47">@file .eslintrc.json と@file docs/coding-guidelines.md（あれば）を参照し、@folder src/features/checkout の実装がプロジェクトの規約に沿っているかレビューしてください。違反箇所は理由付きで指摘してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp47', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">48. 型安全性の観点でレビューする</div><div class="imeta">対象: 上級 ｜ 場面: 型安全性の観点でレビューするとき</div><pre class="prompt" id="pp48">@file src/api/response-types.ts の型定義について、実際のAPIレスポンスと乖離していないか、optionalの付け方が実態に合っているかをレビューしてください。ランタイムでのバリデーションが不足している箇所も指摘してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp48', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">49. Bugbotの指摘に対応する</div><div class="imeta">対象: 中級 ｜ 場面: Bugbotの指摘に対応するとき</div><pre class="prompt" id="pp49">BugbotがこのPRに残したコメントを一つずつ確認し、それぞれについて「対応する」「対応しない」を理由付きで判断してください。対応するものは修正まで行ってください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp49', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">50. 破壊的変更の影響範囲を確認する</div><div class="imeta">対象: 上級 ｜ 場面: 破壊的変更がないか確認したいとき</div><pre class="prompt" id="pp50">@file src/utils/api-client.ts の変更が、このファイルを利用している他の箇所に破壊的な影響を与えないか確認してください。@folder src 全体でこのモジュールを呼び出している箇所を洗い出し、影響範囲を報告してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp50', this)">📋 コピー</button></div></div></div><div class="cat" id="ppc6"><h2>6. ドキュメント・コメント</h2></div><div class="icards"><div class="icard"><div class="ititle">51. 関数にコメントを追加する</div><div class="imeta">対象: 初心者 ｜ 場面: 関数にコメントを追加したいとき</div><pre class="prompt" id="pp51">@file src/utils/parseCsv.ts の各関数に、何をする関数か・引数の意味・戻り値の形が分かるコメントを追加してください。実装を変えず、コメントの追加のみ行ってください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp51', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">52. READMEを整備する</div><div class="imeta">対象: 初心者 ｜ 場面: READMEを整備したいとき</div><pre class="prompt" id="pp52">このプロジェクトの@file package.json とディレクトリ構成を確認したうえで、初めて触る人がセットアップから起動までできるREADME.mdを作成してください。前提条件・インストール手順・起動コマンドを含めてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp52', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">53. APIドキュメントを自動生成する</div><div class="imeta">対象: 中級 ｜ 場面: APIドキュメントを自動生成したいとき</div><pre class="prompt" id="pp53">@folder src/api の各エンドポイントについて、リクエスト・レスポンスの形式が分かるAPIドキュメントを作成してください。OpenAPI（Swagger）形式で出力してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp53', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">54. 複雑なロジックに説明コメントを追加する</div><div class="imeta">対象: 中級 ｜ 場面: 複雑なロジックに説明を追加したいとき</div><pre class="prompt" id="pp54">@file src/domain/discountCalculator.ts の割引計算ロジックは条件が複雑で理解しづらいです。コード自体は変更せず、なぜその条件になっているかが分かるコメントを、各分岐の直前に追加してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp54', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">55. 設計判断の背景をコメントに残す</div><div class="imeta">対象: 中級 ｜ 場面: 設計判断の背景を残したいとき</div><pre class="prompt" id="pp55">@file src/store/authStore.ts でこの状態管理方式を選んだ理由をコメントとして残したいです。他の選択肢（Context APIなど）と比較して、なぜこの実装にしたのかを簡潔に記述してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp55', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">56. TODOコメントを整理する</div><div class="imeta">対象: 初心者 ｜ 場面: TODOコメントを整理したいとき</div><pre class="prompt" id="pp56">@folder src 全体からTODOコメントを一覧化してください。それぞれについて内容を要約し、緊急度（今すぐ対応/次のリリースで対応/後回しで良い）を分類した一覧を作ってください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp56', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">57. コミット履歴からCHANGELOGを作る</div><div class="imeta">対象: 中級 ｜ 場面: 変更履歴をまとめたいとき</div><pre class="prompt" id="pp57">直近のコミット履歴を確認し、ユーザー向けのCHANGELOG.mdのエントリを作成してください。内部的なリファクタリングは除外し、機能追加・不具合修正・破壊的変更に分類してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp57', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">58. アーキテクチャドキュメントを整備する</div><div class="imeta">対象: 上級 ｜ 場面: アーキテクチャドキュメントを整備するとき</div><pre class="prompt" id="pp58">@folder src の構成を分析し、このプロジェクトのアーキテクチャ概要ドキュメントを作成してください。レイヤー構成、データの流れ、主要な設計判断を図解できる形（Mermaid記法）で含めてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp58', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">59. 環境構築手順の抜け漏れを確認する</div><div class="imeta">対象: 中級 ｜ 場面: 環境構築手順の抜け漏れを確認したいとき</div><pre class="prompt" id="pp59">@file README.md に記載されているセットアップ手順を、実際にこのリポジトリの構成と照らし合わせて確認してください。記載漏れている環境変数や手順があれば追記してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp59', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">60. 古くなったコメントを整理する</div><div class="imeta">対象: 初心者 ｜ 場面: 古くなったコメントを整理したいとき</div><pre class="prompt" id="pp60">@folder src/legacy 配下のコメントが、実際のコードの動きと合っていない箇所がないか確認してください。実装と矛盾しているコメントを見つけたら、正しい内容に修正してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp60', this)">📋 コピー</button></div></div></div><div class="cat" id="ppc7"><h2>7. 設計・アーキテクチャ</h2></div><div class="icards"><div class="icard"><div class="ititle">61. 新機能の設計方針を相談する</div><div class="imeta">対象: 中級 ｜ 場面: 新機能の設計方針を相談したいとき</div><pre class="prompt" id="pp61">「お気に入り機能」を追加したいです。@folder src の既存の構成を踏まえて、データ構造・API設計・フロントの状態管理をどう実装するのが良いか、選択肢を2〜3案示したうえでそれぞれのメリット・デメリットを教えてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp61', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">62. フォルダ構成の見直しを検討する</div><div class="imeta">対象: 上級 ｜ 場面: フォルダ構成を見直したいとき</div><pre class="prompt" id="pp62">@folder src の現在のディレクトリ構成が機能追加のたびに複雑になっています。機能単位（feature-based）の構成に移行する場合の新しいディレクトリ構造案を提示してください。移行は一度に行わず、段階的な手順も示してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp62', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">63. 状態管理ライブラリの選定を相談する</div><div class="imeta">対象: 中級 ｜ 場面: 状態管理ライブラリの選定を相談したいとき</div><pre class="prompt" id="pp63">現在propsのバケツリレーが3階層以上になっているコンポーネントがあります。@folder src/components を確認したうえで、Context APIと外部の状態管理ライブラリのどちらが適しているか、このプロジェクトの規模感を踏まえて判断してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp63', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">64. キャッシュ戦略を設計する</div><div class="imeta">対象: 上級 ｜ 場面: キャッシュ戦略を設計するとき</div><pre class="prompt" id="pp64">@file src/api/productApi.ts のデータ取得について、キャッシュ戦略を設計してください。更新頻度の低いマスタデータと、頻繁に変わる在庫数を分けて、それぞれ適切なキャッシュ期間と無効化のタイミングを提案してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp64', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">65. エラーハンドリングの共通方針を決める</div><div class="imeta">対象: 上級 ｜ 場面: エラーハンドリングの共通方針を決めたいとき</div><pre class="prompt" id="pp65">@folder src/api 全体でエラーハンドリングの書き方がバラバラです。このプロジェクト全体で統一するエラーハンドリングの方針（エラークラスの設計、ユーザーへの表示方法、ログ出力）を設計してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp65', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">66. 新しいモジュールを疎結合に設計する</div><div class="imeta">対象: 中級 ｜ 場面: 既存システムに新しいモジュールを追加するとき</div><pre class="prompt" id="pp66">通知機能（メール・アプリ内通知）を新たに追加します。@folder src の既存の依存関係を壊さないよう、疎結合な形でモジュールを設計してください。インターフェースの設計案を先に提示してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp66', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">67. マイクロサービス化に向けた境界を洗い出す</div><div class="imeta">対象: 上級 ｜ 場面: マイクロサービス化を検討するとき</div><pre class="prompt" id="pp67">@folder src の現在のモノリス構成を分析し、将来的に切り出しやすい境界（ドメインの単位）を洗い出してください。すぐに分割する前提ではなく、まずは分割しやすくするための内部的な整理案を提示してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp67', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">68. 認証・認可の設計を確認する</div><div class="imeta">対象: 中級 ｜ 場面: 認証・認可の設計を確認したいとき</div><pre class="prompt" id="pp68">@folder src/middleware の認証・認可周りの実装を確認し、管理者権限のチェックが漏れているエンドポイントがないか洗い出してください。権限モデルをロールベースにするかポリシーベースにするか、現状に合った方針も提案してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp68', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">69. データベーススキーマ変更の影響範囲を洗い出す</div><div class="imeta">対象: 上級 ｜ 場面: データベーススキーマの変更を検討するとき</div><pre class="prompt" id="pp69">@file prisma/schema.prisma を確認し、注文と商品の関係を多対多に変更する場合の影響範囲を洗い出してください。既存データを壊さないマイグレーション手順も含めて設計案を提示してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp69', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">70. フロントとバックエンドの責務分担を整理する</div><div class="imeta">対象: 中級 ｜ 場面: フロントエンドとバックエンドの責務分担を整理したいとき</div><pre class="prompt" id="pp70">@folder src の現状を見ると、バリデーションロジックがフロントとバックエンドで重複したり食い違ったりしています。どちらが真実のソース（source of truth）になるべきか整理し、重複を解消する設計を提案してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp70', this)">📋 コピー</button></div></div></div><div class="cat" id="ppc8"><h2>8. 学習・コード理解</h2></div><div class="icards"><div class="icard"><div class="ititle">71. 初めて触るコードベースを理解する</div><div class="imeta">対象: 初心者 ｜ 場面: 初めて触るコードベースを理解したいとき</div><pre class="prompt" id="pp71">@folder src を分析して、このプロジェクトが何をするアプリなのか、主要なフォルダがそれぞれ何を担当しているのかを、初めて見る人向けに分かりやすく説明してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp71', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">72. 関数の動きを具体例で理解する</div><div class="imeta">対象: 初心者 ｜ 場面: 関数の動きが分からないとき</div><pre class="prompt" id="pp72">@file src/utils/debounce.ts のdebounce関数がどう動くのか、具体的な実行例（タイムラインのイメージ）を交えて説明してください。なぜこの実装が必要なのか、使わない場合に何が起きるかも教えてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp72', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">73. 複雑な型定義をJSONの例で理解する</div><div class="imeta">対象: 初心者 ｜ 場面: エラーの型が理解できないとき</div><pre class="prompt" id="pp73">@file src/types/api.ts で定義されている型が複雑で読み解けません。この型がどんな形のデータを表しているのか、具体的なJSONの例を使って説明してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp73', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">74. ライブラリの使われ方を理解する</div><div class="imeta">対象: 中級 ｜ 場面: ライブラリの使われ方を理解したいとき</div><pre class="prompt" id="pp74">このプロジェクトで@file package.json にあるreact-queryがどう使われているか、@folder src から実際の使用箇所を探して、基本的な使い方のパターンをまとめて説明してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp74', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">75. 処理の流れを時系列で追う</div><div class="imeta">対象: 中級 ｜ 場面: 処理の流れを追いたいとき</div><pre class="prompt" id="pp75">ユーザーがログインボタンを押してから画面が切り替わるまでの処理の流れを、@folder src のコードを実際にたどって時系列で説明してください。関わっているファイル名も明記してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp75', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">76. 使われている設計パターンを識別する</div><div class="imeta">対象: 中級 ｜ 場面: 設計パターンを識別したいとき</div><pre class="prompt" id="pp76">@file src/services/paymentGateway.ts で使われている設計パターンは何か教えてください。なぜこのパターンが選ばれたと考えられるか、このプロジェクトの文脈に沿って推測も含めて説明してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp76', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">77. パフォーマンス特性を理解する</div><div class="imeta">対象: 上級 ｜ 場面: パフォーマンス特性を理解したいとき</div><pre class="prompt" id="pp77">@file src/utils/memoize.ts の実装が、時間計算量・空間計算量の観点でどのような特性を持つか説明してください。どういうケースで有効で、どういうケースでは逆効果になるかも教えてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp77', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">78. カスタムフックという概念を実例で学ぶ</div><div class="imeta">対象: 初心者 ｜ 場面: 新しい概念を実例で学びたいとき</div><pre class="prompt" id="pp78">このプロジェクトでカスタムフックという仕組みが使われていますが、まだよく理解できていません。@file src/hooks/useDebounce.ts を例に、通常の関数と何が違うのか、なぜフックとして切り出す必要があるのかを初心者向けに説明してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp78', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">79. 依存関係の全体像を図で把握する</div><div class="imeta">対象: 中級 ｜ 場面: 依存関係の全体像を把握したいとき</div><pre class="prompt" id="pp79">@file src/components/Checkout.tsx が依存しているモジュール・フック・APIを洗い出し、依存関係の全体像を図（Mermaid記法）で示してください。循環参照になっている箇所があれば指摘してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp79', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">80. 過去の設計判断の経緯を推測する</div><div class="imeta">対象: 上級 ｜ 場面: 過去の設計判断の経緯を推測したいとき</div><pre class="prompt" id="pp80">@file src/legacy/oldPaymentFlow.ts のコードは今の設計方針と大きく異なります。コミット履歴とコードの書き方から、当時どういう制約や事情があってこの設計になったと考えられるか推測して説明してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp80', this)">📋 コピー</button></div></div></div><div class="cat" id="ppc9"><h2>9. Git・PR・運用</h2></div><div class="icards"><div class="icard"><div class="ititle">81. コミットメッセージを整える</div><div class="imeta">対象: 初心者 ｜ 場面: コミットメッセージを整えたいとき</div><pre class="prompt" id="pp81">git diffで表示される変更内容を確認し、Conventional Commits形式（feat/fix/refactor等）に沿ったコミットメッセージを日本語で提案してください。変更理由が伝わる1文も添えてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp81', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">82. プルリクエストの説明文を書く</div><div class="imeta">対象: 初心者 ｜ 場面: プルリクエストの説明文を書きたいとき</div><pre class="prompt" id="pp82">このブランチの変更差分全体を確認し、プルリクエストのタイトルと説明文を作成してください。変更の背景・具体的な変更内容・動作確認方法の3項目に分けて書いてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp82', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">83. マージコンフリクトを解消する</div><div class="imeta">対象: 中級 ｜ 場面: コンフリクトを解消したいとき</div><pre class="prompt" id="pp83">mainブランチとのマージでコンフリクトが発生しています。@file （コンフリクトしているファイル）の内容を確認し、両方の変更意図を保ったまま解消する案を提示してください。どちらかを単純に消す前に、意図を確認してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp83', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">84. 大きすぎるPRを分割する</div><div class="imeta">対象: 中級 ｜ 場面: 大きすぎるPRを分割したいとき</div><pre class="prompt" id="pp84">このブランチの変更が大きくなりすぎてレビューしづらい状態です。git logとgit diffを確認し、意味のある単位で複数のプルリクエストに分割する方法を提案してください。分割の順序も考慮してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp84', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">85. リリースノートを作成する</div><div class="imeta">対象: 中級 ｜ 場面: リリースノートを作成したいとき</div><pre class="prompt" id="pp85">前回のリリースタグから現在までのコミット履歴を確認し、ユーザー向けのリリースノートを作成してください。専門用語を避け、何が新しくできるようになったかを中心にまとめてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp85', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">86. バグ混入コミットをbisectで特定する</div><div class="imeta">対象: 上級 ｜ 場面: 特定のバグがいつ混入したか調べたいとき</div><pre class="prompt" id="pp86">@file src/utils/calculateShipping.ts のこの計算が壊れたのがいつのコミットか調べたいです。git bisectの使い方を含めて、原因のコミットを特定する手順を教えてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp86', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">87. ブランチ運用ルールを確認する</div><div class="imeta">対象: 初心者 ｜ 場面: ブランチ運用のルールを確認したいとき</div><pre class="prompt" id="pp87">@file CONTRIBUTING.md （なければREADME.md）を確認し、このプロジェクトのブランチ命名規則とマージ方法のルールを教えてください。今作業している内容にはどんなブランチ名が適切か提案してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp87', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">88. CI/CDの実行時間を短縮する</div><div class="imeta">対象: 中級 ｜ 場面: CI/CDの設定を見直したいとき</div><pre class="prompt" id="pp88">@file .github/workflows/ci.yml を確認し、テストの実行時間を短縮する方法がないか調べてください。並列実行やキャッシュの活用で改善できる箇所があれば具体的な修正案を提示してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp88', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">89. 誤ってコミットした秘密情報に対処する</div><div class="imeta">対象: 中級 ｜ 場面: 誤ってコミットした秘密情報を扱うとき</div><pre class="prompt" id="pp89">直前のコミットに誤ってAPIキーを含めてしまいました。まだリモートにpushしていない前提で、安全に取り消して再コミットする手順を教えてください。pushしている場合の対応方法も併せて教えてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp89', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">90. Cloud Agentでバックグラウンドタスクを回す</div><div class="imeta">対象: 上級 ｜ 場面: Cloud Agentでバックグラウンドタスクを回すとき</div><pre class="prompt" id="pp90">このリポジトリの依存パッケージの脆弱性チェックと、軽微なlintエラーの一括修正を、Cloud Agentでバックグラウンドタスクとして実行してください。完了後は変更内容をプルリクエストとしてまとめてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp90', this)">📋 コピー</button></div></div></div><div class="cat" id="ppc10"><h2>10. 生産性・自動化(Agent/MCP活用)</h2></div><div class="icards"><div class="icard"><div class="ititle">91. 複数ファイルのJSDocを一括で補完する</div><div class="imeta">対象: 初心者 ｜ 場面: 複数ファイルにまたがる単純作業を任せたいとき</div><pre class="prompt" id="pp91">@folder src/components 内の全コンポーネントで、propsの型定義にJSDocコメントが付いていないものを探し、それぞれ簡潔な説明を追加してください。Agentモードで一括対応してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp91', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">92. 表記ゆれを一括で直す</div><div class="imeta">対象: 初心者 ｜ 場面: 表記ゆれを一括で直したいとき</div><pre class="prompt" id="pp92">@folder src 全体で「ユーザー」と「ユーザ」の表記が混在しています。UIに表示される文言をすべて「ユーザー」に統一してください。変数名やコード内の識別子は変更しないでください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp92', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">93. 複数の小さな修正をまとめて依頼する</div><div class="imeta">対象: 中級 ｜ 場面: 複数の小さな修正をまとめて任せたいとき</div><pre class="prompt" id="pp93">以下の3件を順番に対応してください。1) @file src/utils/logger.ts のconsole.logをloggerに置き換え、2) @file src/config/env.ts の未使用の環境変数を削除、3) @file package.json のバージョン番号を更新。それぞれ完了後に何を変更したか報告してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp93', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">94. Figma MCPでデザインからコードを生成する</div><div class="imeta">対象: 中級 ｜ 場面: MCPでデザインファイルからコードを生成したいとき</div><pre class="prompt" id="pp94">Figma MCPで@（対象のFigmaリンク）のデザインを取得し、@folder src/components の既存コンポーネントの実装パターンに合わせてReactコンポーネントとして実装してください。デザイントークンは@file src/styles/tokens.ts のものを使ってください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp94', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">95. Web検索で最新の非推奨情報を反映する</div><div class="imeta">対象: 中級 ｜ 場面: Web検索を活用して最新情報を反映したいとき</div><pre class="prompt" id="pp95">@web で使用しているライブラリの最新の非推奨（deprecated）情報を確認し、@folder src 内でそのAPIを使っている箇所があれば洗い出してください。見つかった場合は推奨される代替方法への置き換え案を提示してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp95', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">96. 定型作業をSkillとして仕組み化する</div><div class="imeta">対象: 上級 ｜ 場面: 定型作業をSkillとして仕組み化したいとき</div><pre class="prompt" id="pp96">新しいAPIエンドポイントを追加するたびに、ルーティング登録・バリデーション・テストファイル作成という同じ手順を繰り返しています。この手順をCursorのSkillとして定義し、次回からは要件を伝えるだけで一連の作業が実行できるようにしてください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp96', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">97. Hookでコミット前チェックを自動化する</div><div class="imeta">対象: 中級 ｜ 場面: 定期的なチェックをHookで自動化したいとき</div><pre class="prompt" id="pp97">コミット前に必ずlintとフォーマットチェックを走らせたいです。pre-commitのHookを設定し、エラーがある場合はコミットをブロックするようにしてください。既存のnpm scriptsを活用してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp97', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">98. 複数のAgentタスクを並行で走らせる</div><div class="imeta">対象: 上級 ｜ 場面: 複数のAgentタスクを並行で走らせたいとき</div><pre class="prompt" id="pp98">以下の2つの作業を並行して進めてください。1) @folder src/api のエラーハンドリング統一、2) @folder src/components のアクセシビリティ改善。それぞれ独立したブランチで作業し、完了後に差分をまとめて報告してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp98', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">99. Grok 4.5で大規模な一括修正をコストを抑えて進める</div><div class="imeta">対象: 上級 ｜ 場面: Grok 4.5でコストを抑えつつ大規模なリファクタリングをするとき</div><pre class="prompt" id="pp99">モデルをGrok 4.5に切り替えた状態で進めてください。@folder src 全体を対象に、非推奨になったuseEffectの依存配列の書き方を、プロジェクトのESLintルールに沿った形に一括修正してください。変更ファイル数が多いため、まず対象ファイル一覧を提示してから着手してください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp99', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">100. 大規模リポジトリの棚卸しを任せる</div><div class="imeta">対象: 上級 ｜ 場面: 大規模なリポジトリの棚卸しを任せたいとき</div><pre class="prompt" id="pp100">@folder src 全体を分析し、直近半年間で一度も変更されておらず、かつどこからも参照されていないファイルの一覧を作成してください。削除候補として提示するだけにとどめ、実際の削除は行わないでください。</pre><div class="btns"><button class="btn" onclick="copyPrompt('pp100', this)">📋 コピー</button></div></div></div><pre id="ppfull" style="display:none;"># 🎁 Cursorで使えるプロンプト100選
+
+Cursorのチャット・Agentにそのまま貼って使える実用プロンプト集です。カテゴリ別に100本。
+
+**受け取り方**: 各プロンプトをコピーして、Cursorのチャット欄に貼り付けてください。@でファイルやフォルダを指定すると精度が上がります。
+
+## 1. コード生成・実装
+
+### 1. ゼロから小さな機能を作る
+対象: 初心者 ｜ 場面: ゼロから小さな機能を作りたいとき
+```text
+@folder src を参照して、このプロジェクトの命名規則とディレクトリ構成に合わせた形で、ユーザーのメールアドレスを検証する関数を実装してください。TypeScriptの型を明示し、正規表現ではなく既存のバリデーションライブラリがあればそれを使ってください。
+```
+
+### 2. 既存コンポーネントに合わせて新規UIを作る
+対象: 初心者 ｜ 場面: フォームのUIコンポーネントを作るとき
+```text
+@file src/components/Button.tsx のスタイルとpropsの書き方を参考にして、同じデザインパターンでテキスト入力用のInputコンポーネントを新規作成してください。エラーメッセージ表示用のpropも用意してください。
+```
+
+### 3. 既存APIに合わせて新規エンドポイントを追加する
+対象: 初心者 ｜ 場面: APIエンドポイントを追加したいとき
+```text
+@folder src/api を見て、既存のエンドポイントと同じ書き方でユーザー情報を取得するGET /users/:idのエンドポイントを追加してください。認証ミドルウェアが必要なら既存のものを流用してください。
+```
+
+### 4. 既存機能にオプションを追加する
+対象: 中級 ｜ 場面: 既存機能に新しい選択肢を追加するとき
+```text
+@file src/utils/formatDate.ts の実装を見て、日付フォーマットに「相対時間表示（3分前、1時間前など）」のオプションを追加してください。既存の呼び出し箇所を壊さないよう、デフォルト引数で後方互換性を保ってください。
+```
+
+### 5. 外部API連携処理を書く
+対象: 中級 ｜ 場面: 外部APIとの連携処理を書くとき
+```text
+Stripeの決済APIを使って、サブスクリプションのキャンセル処理を実装してください。@docs でStripeの公式ドキュメントを参照し、エラー時のリトライとログ出力も含めてください。
+```
+
+### 6. 状態管理ロジックを追加する
+対象: 中級 ｜ 場面: 状態管理のロジックを追加するとき
+```text
+@file src/store/cartStore.ts の既存のZustandストアの構造に合わせて、クーポンコードの適用状態を管理するスライスを追加してください。合計金額の再計算ロジックも含めてください。
+```
+
+### 7. 大量データでも重くならない実装にする
+対象: 上級 ｜ 場面: パフォーマンスを意識した実装が必要なとき
+```text
+@file src/components/DataTable.tsx を見て、1万行以上のデータを表示しても描画が遅くならないよう、仮想スクロール（virtualization）を導入した実装に書き換えてください。react-windowなど軽量なライブラリを使い、既存のソート・フィルタ機能は維持してください。
+```
+
+### 8. Plan modeで複数ファイルの機能を実装する
+対象: 上級 ｜ 場面: 複数ファイルにまたがる機能を一気に実装したいとき
+```text
+Plan modeで進めてください。要件: ユーザーが画像をアップロードしてサムネイルを自動生成する機能。@folder src を参照し、必要なAPI・ストレージ処理・フロントのアップロードUIまでの実装計画を先に提示し、承認後に着手してください。
+```
+
+### 9. 既存フックのスタイルを踏襲して新規フックを作る
+対象: 中級 ｜ 場面: 既存コードのスタイルを踏襲して新規ファイルを作るとき
+```text
+@file src/hooks/useAuth.ts のフックの書き方（命名・エラーハンドリング・返り値の形）と同じスタイルで、ローカルストレージの値を型安全に読み書きするuseLocalStorageフックを作成してください。
+```
+
+### 10. 複雑な条件分岐を含む料金ロジックを実装する
+対象: 上級 ｜ 場面: 複雑な条件分岐を含むビジネスロジックを実装するとき
+```text
+@file src/domain/pricing.ts を参照し、会員ランク・クーポン・キャンペーン期間が重なった場合の割引計算ロジックを実装してください。優先順位のルールは@file docs/pricing-rules.md に記載の通りとし、判定不能なケースは例外を投げるようにしてください。
+```
+
+## 2. リファクタリング
+
+### 11. 長すぎる関数を分割する
+対象: 初心者 ｜ 場面: 長すぎる関数を整理したいとき
+```text
+@file src/utils/checkout.ts のprocessOrder関数が150行以上あり読みにくいです。責務ごとに小さな関数へ分割してください。挙動は一切変えず、既存のテストが通ることを確認してください。
+```
+
+### 12. 重複コードを共通化する
+対象: 初心者 ｜ 場面: 重複コードをまとめたいとき
+```text
+@folder src/components 内で似たようなローディングスピナーの実装が3箇所にあります。共通コンポーネントとして1つに切り出し、各呼び出し箇所を置き換えてください。
+```
+
+### 13. クラスコンポーネントを関数コンポーネントに移行する
+対象: 中級 ｜ 場面: クラスコンポーネントを関数コンポーネントに移行するとき
+```text
+@file src/components/UserProfile.tsx のクラスコンポーネントを、Reactフックを使った関数コンポーネントに書き換えてください。ライフサイクルメソッドはuseEffectに対応させ、既存のpropsの型は変更しないでください。
+```
+
+### 14. ネストの深いif文を読みやすくする
+対象: 中級 ｜ 場面: ネストの深いif文を読みやすくしたいとき
+```text
+@file src/services/validation.ts のvalidateForm関数はif文が5段階以上ネストしています。早期リターンやガード節を使ってネストを浅くし、ロジックの意味が一目で分かる形にしてください。
+```
+
+### 15. マジックナンバーを定数化する
+対象: 中級 ｜ 場面: マジックナンバーや文字列を定数化したいとき
+```text
+@file src/config/constants.ts を確認したうえで、@folder src 全体に散らばっているハードコードされたステータスコードやAPIパスを、定数として一箇所にまとめてください。呼び出し元は全てその定数を参照する形に置き換えてください。
+```
+
+### 16. Strategyパターンを導入する
+対象: 上級 ｜ 場面: 特定のデザインパターンを導入したいとき
+```text
+@file src/services/notificationService.ts は通知チャネル（メール・SMS・プッシュ）ごとにif分岐が増え続けています。Strategyパターンを導入して、新しいチャネルを追加する際にこのファイルを変更しなくて済む構造にリファクタリングしてください。
+```
+
+### 17. any型を厳密な型に置き換える
+対象: 上級 ｜ 場面: 型の緩さを厳密にしたいとき
+```text
+@folder src/types を確認し、anyやunknownが多用されている@file src/api/client.ts の型定義を厳密なものに置き換えてください。APIレスポンスの型はZodスキーマから推論する形にしてください。
+```
+
+### 18. 巨大なページコンポーネントを分割する
+対象: 中級 ｜ 場面: 大きなコンポーネントを分割したいとき
+```text
+@file src/pages/Dashboard.tsx が500行を超えています。データ取得ロジック・表示ロジック・レイアウトを分離し、責務ごとに小さなコンポーネントとカスタムフックへ分割してください。分割後の構成案を先に提示してください。
+```
+
+### 19. 非同期処理の書き方を統一する
+対象: 上級 ｜ 場面: 非同期処理をモダンな書き方に統一したいとき
+```text
+@folder src/api 内でコールバック形式とPromise形式とasync/awaitが混在しています。全てasync/awaitに統一し、エラーハンドリングの書き方も一貫させてください。挙動が変わる可能性がある箇所は変更前に指摘してください。
+```
+
+### 20. 古い依存ライブラリを置き換える
+対象: 中級 ｜ 場面: 依存関係を減らしたいとき
+```text
+@file package.json を確認し、moment.jsを使っている箇所を@folder src から洗い出して、既に依存しているdate-fnsに置き換えてください。タイムゾーンを扱っている箇所は特に注意して動作を確認してください。
+```
+
+## 3. デバッグ・エラー解決
+
+### 21. エラーメッセージの意味を教えてもらう
+対象: 初心者 ｜ 場面: エラーメッセージの意味が分からないとき
+```text
+このエラーが出て原因が分かりません。@file src/pages/Login.tsx とエラーログを見て、何が起きているか日本語で分かりやすく説明したうえで、修正案を提示してください。
+
+エラー内容:
+Cannot read properties of undefined (reading 'user')
+```
+
+### 22. 画面が真っ白になる不具合を直す
+対象: 初心者 ｜ 場面: 画面が真っ白になったとき
+```text
+アプリを開くと画面が真っ白になり、コンソールにエラーが出ています。@folder src を確認し、どのコンポーネントで問題が起きているか特定してから、最小限の修正で直してください。
+```
+
+### 23. 特定条件でのみ発生するバグを調べる
+対象: 中級 ｜ 場面: 特定の条件でだけ発生するバグを調べるとき
+```text
+@file src/hooks/useCart.ts で、商品を連続で素早くクリックしたときだけ合計金額がずれる不具合があります。再現条件を整理したうえで、状態更新のタイミングに問題がないか調査し、修正してください。
+```
+
+### 24. 非同期処理のバグを調べる
+対象: 中級 ｜ 場面: 非同期処理のバグを調べるとき
+```text
+@file src/services/fetchUserData.ts で、複数のAPIリクエストを並列実行した際にたまにデータが取り違わる不具合が発生します。Race conditionの可能性を含めて原因を調査し、修正案を提示してください。
+```
+
+### 25. 本番環境だけで起きるエラーを調査する
+対象: 中級 ｜ 場面: 本番環境だけで起きるエラーを調査するとき
+```text
+開発環境では再現しませんが、本番環境だけで@file src/middleware/auth.ts 付近のエラーが発生しています。環境変数・ビルド設定・環境差分の観点から考えられる原因を@folder src と設定ファイルから洗い出してください。
+```
+
+### 26. メモリリークを調査する
+対象: 上級 ｜ 場面: メモリリークを疑うとき
+```text
+@file src/components/RealtimeChart.tsx を長時間表示しているとブラウザが重くなります。useEffectのクリーンアップ処理やイベントリスナーの解除漏れがないか確認し、メモリリークの原因になりそうな箇所を指摘して修正してください。
+```
+
+### 27. ビルドエラーを解決する
+対象: 初心者 ｜ 場面: ビルドが通らないとき
+```text
+npm run buildを実行するとエラーで失敗します。エラーログを貼るので、@file tsconfig.json と該当ファイルを確認して、原因と修正方法を教えてください。修正は最小限の変更で行ってください。
+
+（ここにビルドエラーのログを貼り付ける）
+```
+
+### 28. テスト失敗の原因を切り分ける
+対象: 中級 ｜ 場面: テストが通らない原因を調べるとき
+```text
+@file src/utils/priceCalculator.test.ts のテストが失敗しています。テストの期待値が正しいのか、実装側にバグがあるのかをまず切り分けてから、原因箇所を特定して修正してください。
+```
+
+### 29. パフォーマンス低下の原因を特定する
+対象: 上級 ｜ 場面: パフォーマンス低下の原因を特定するとき
+```text
+@file src/pages/ProductList.tsx の一覧表示が重くなっています。不要な再レンダリングが起きていないか、useMemoやReact.memoの使いどころが適切かを調査し、ボトルネックになっている箇所を特定して改善してください。
+```
+
+### 30. 環境差分によるバグを切り分ける
+対象: 中級 ｜ 場面: 環境差分によるバグを切り分けるとき
+```text
+Node.jsのバージョンを上げてから@folder src の一部が動かなくなりました。@file package.json のdependenciesを確認し、非互換の可能性があるパッケージやAPIの使い方を洗い出してください。
+```
+
+## 4. テスト作成
+
+### 31. 初めて単体テストを書く
+対象: 初心者 ｜ 場面: 初めて単体テストを書くとき
+```text
+@file src/utils/formatCurrency.ts の関数に対する単体テストを書いてください。正常系だけでなく、0円やマイナス値、undefinedが渡された場合の異常系のケースも含めてください。
+```
+
+### 32. テストが一つもない関数にテストを追加する
+対象: 初心者 ｜ 場面: 既存関数にテストがないとき
+```text
+@file src/utils/validateEmail.ts にはテストが一つもありません。このプロジェクトで使われているテストフレームワークを確認したうえで、代表的なケースを網羅したテストを追加してください。
+```
+
+### 33. コンポーネントのテストを書く
+対象: 中級 ｜ 場面: コンポーネントのテストを書くとき
+```text
+@file src/components/LoginForm.tsx に対して、React Testing Libraryを使ったテストを作成してください。入力バリデーションの表示、送信ボタンの活性・非活性、送信成功時のコールバック呼び出しをそれぞれ検証してください。
+```
+
+### 34. APIのモックを使ったテストを書く
+対象: 中級 ｜ 場面: APIのモックを使ったテストを書くとき
+```text
+@file src/services/userApi.ts のAPI呼び出し部分について、実際の通信をせずにモック化したテストを書いてください。成功時・404エラー時・タイムアウト時のそれぞれの挙動を検証してください。
+```
+
+### 35. E2Eテストのシナリオを設計する
+対象: 上級 ｜ 場面: E2Eテストのシナリオを設計するとき
+```text
+ログインから商品購入完了までの一連の流れをカバーするE2Eテストを設計してください。@folder src/pages を参照し、Playwrightで実装し、途中でエラーが起きた場合にスクリーンショットが残る設定も加えてください。
+```
+
+### 36. エッジケースの漏れを洗い出す
+対象: 中級 ｜ 場面: エッジケースの漏れを洗い出したいとき
+```text
+@file src/utils/dateRange.ts の関数について、現状のテストでカバーされていないエッジケース（うるう年、月末、タイムゾーンをまたぐ日付など）を洗い出し、不足しているテストを追加してください。
+```
+
+### 37. テストカバレッジを上げる
+対象: 中級 ｜ 場面: テストカバレッジを上げたいとき
+```text
+@folder src/services のテストカバレッジレポートを確認し、カバレッジが低いファイルを優先順位付けしてください。上位3ファイルについて、重要度の高い分岐から順にテストを追加してください。
+```
+
+### 38. 非同期処理を含むカスタムフックをテストする
+対象: 上級 ｜ 場面: 非同期処理を含む複雑な関数をテストするとき
+```text
+@file src/hooks/useInfiniteScroll.ts のカスタムフックに対して、スクロール位置に応じたデータ追加読み込みの挙動をテストしてください。タイマーやIntersectionObserverはモック化し、意図しない無限ループが起きないことも検証してください。
+```
+
+### 39. 不安定なテストを直す
+対象: 初心者 ｜ 場面: 壊れやすいテストを直したいとき
+```text
+@file src/components/Notification.test.tsx のテストが実行するたびに成功したり失敗したりします。時間やランダム値に依存している箇所がないか確認し、安定して同じ結果になるように修正してください。
+```
+
+### 40. スナップショットテストを整理する
+対象: 中級 ｜ 場面: スナップショットテストを整理したいとき
+```text
+@folder src/components のスナップショットテストが更新のたびに大量に差分が出て、レビューが困難になっています。本当に検証すべき箇所を洗い出し、スナップショットではなく個別のアサーションに置き換えられる部分を提案してください。
+```
+
+## 5. コードレビュー・品質
+
+### 41. コミット前に自分の変更をチェックする
+対象: 初心者 ｜ 場面: 自分の変更をコミット前にチェックしたいとき
+```text
+git diffで表示される変更内容をレビューしてください。バグの可能性、命名の分かりにくさ、コメントが必要な箇所があれば指摘してください。指摘は修正案とセットで出してください。
+```
+
+### 42. アップロード処理のセキュリティを確認する
+対象: 初心者 ｜ 場面: セキュリティ面が不安なとき
+```text
+@file src/api/uploadFile.ts についてセキュリティの観点でレビューしてください。ファイルサイズやMIMEタイプの検証漏れ、パストラバーサルの可能性がないか確認してください。
+```
+
+### 43. プルリクエスト全体をレビューする
+対象: 中級 ｜ 場面: プルリクエスト全体をレビューしてほしいとき
+```text
+このプルリクエストの変更差分全体をレビューしてください。既存の設計方針との一貫性、テストの有無、エラーハンドリングの妥当性の3点を中心に確認し、優先度をつけて指摘してください。
+```
+
+### 44. エラーハンドリングの漏れをチェックする
+対象: 中級 ｜ 場面: エラーハンドリングの漏れをチェックするとき
+```text
+@folder src/api の全ファイルを確認し、try-catchで例外を握りつぶしている箇所や、エラーがユーザーに何も伝わらないまま失敗している箇所がないかチェックしてください。
+```
+
+### 45. アクセシビリティの観点でレビューする
+対象: 上級 ｜ 場面: アクセシビリティの観点でレビューするとき
+```text
+@file src/components/Modal.tsx をアクセシビリティの観点でレビューしてください。キーボード操作でのフォーカストラップ、aria属性の付与、スクリーンリーダーでの読み上げに問題がないか確認し、修正してください。
+```
+
+### 46. N+1問題を探す
+対象: 中級 ｜ 場面: N+1問題など性能上の問題を探すとき
+```text
+@folder src/repositories のデータベースアクセス部分を確認し、ループの中でクエリを発行しているN+1問題が起きていないかチェックしてください。見つかった箇所は一括取得に修正してください。
+```
+
+### 47. コーディング規約への準拠を確認する
+対象: 中級 ｜ 場面: コーディング規約に沿っているか確認したいとき
+```text
+@file .eslintrc.json と@file docs/coding-guidelines.md（あれば）を参照し、@folder src/features/checkout の実装がプロジェクトの規約に沿っているかレビューしてください。違反箇所は理由付きで指摘してください。
+```
+
+### 48. 型安全性の観点でレビューする
+対象: 上級 ｜ 場面: 型安全性の観点でレビューするとき
+```text
+@file src/api/response-types.ts の型定義について、実際のAPIレスポンスと乖離していないか、optionalの付け方が実態に合っているかをレビューしてください。ランタイムでのバリデーションが不足している箇所も指摘してください。
+```
+
+### 49. Bugbotの指摘に対応する
+対象: 中級 ｜ 場面: Bugbotの指摘に対応するとき
+```text
+BugbotがこのPRに残したコメントを一つずつ確認し、それぞれについて「対応する」「対応しない」を理由付きで判断してください。対応するものは修正まで行ってください。
+```
+
+### 50. 破壊的変更の影響範囲を確認する
+対象: 上級 ｜ 場面: 破壊的変更がないか確認したいとき
+```text
+@file src/utils/api-client.ts の変更が、このファイルを利用している他の箇所に破壊的な影響を与えないか確認してください。@folder src 全体でこのモジュールを呼び出している箇所を洗い出し、影響範囲を報告してください。
+```
+
+## 6. ドキュメント・コメント
+
+### 51. 関数にコメントを追加する
+対象: 初心者 ｜ 場面: 関数にコメントを追加したいとき
+```text
+@file src/utils/parseCsv.ts の各関数に、何をする関数か・引数の意味・戻り値の形が分かるコメントを追加してください。実装を変えず、コメントの追加のみ行ってください。
+```
+
+### 52. READMEを整備する
+対象: 初心者 ｜ 場面: READMEを整備したいとき
+```text
+このプロジェクトの@file package.json とディレクトリ構成を確認したうえで、初めて触る人がセットアップから起動までできるREADME.mdを作成してください。前提条件・インストール手順・起動コマンドを含めてください。
+```
+
+### 53. APIドキュメントを自動生成する
+対象: 中級 ｜ 場面: APIドキュメントを自動生成したいとき
+```text
+@folder src/api の各エンドポイントについて、リクエスト・レスポンスの形式が分かるAPIドキュメントを作成してください。OpenAPI（Swagger）形式で出力してください。
+```
+
+### 54. 複雑なロジックに説明コメントを追加する
+対象: 中級 ｜ 場面: 複雑なロジックに説明を追加したいとき
+```text
+@file src/domain/discountCalculator.ts の割引計算ロジックは条件が複雑で理解しづらいです。コード自体は変更せず、なぜその条件になっているかが分かるコメントを、各分岐の直前に追加してください。
+```
+
+### 55. 設計判断の背景をコメントに残す
+対象: 中級 ｜ 場面: 設計判断の背景を残したいとき
+```text
+@file src/store/authStore.ts でこの状態管理方式を選んだ理由をコメントとして残したいです。他の選択肢（Context APIなど）と比較して、なぜこの実装にしたのかを簡潔に記述してください。
+```
+
+### 56. TODOコメントを整理する
+対象: 初心者 ｜ 場面: TODOコメントを整理したいとき
+```text
+@folder src 全体からTODOコメントを一覧化してください。それぞれについて内容を要約し、緊急度（今すぐ対応/次のリリースで対応/後回しで良い）を分類した一覧を作ってください。
+```
+
+### 57. コミット履歴からCHANGELOGを作る
+対象: 中級 ｜ 場面: 変更履歴をまとめたいとき
+```text
+直近のコミット履歴を確認し、ユーザー向けのCHANGELOG.mdのエントリを作成してください。内部的なリファクタリングは除外し、機能追加・不具合修正・破壊的変更に分類してください。
+```
+
+### 58. アーキテクチャドキュメントを整備する
+対象: 上級 ｜ 場面: アーキテクチャドキュメントを整備するとき
+```text
+@folder src の構成を分析し、このプロジェクトのアーキテクチャ概要ドキュメントを作成してください。レイヤー構成、データの流れ、主要な設計判断を図解できる形（Mermaid記法）で含めてください。
+```
+
+### 59. 環境構築手順の抜け漏れを確認する
+対象: 中級 ｜ 場面: 環境構築手順の抜け漏れを確認したいとき
+```text
+@file README.md に記載されているセットアップ手順を、実際にこのリポジトリの構成と照らし合わせて確認してください。記載漏れている環境変数や手順があれば追記してください。
+```
+
+### 60. 古くなったコメントを整理する
+対象: 初心者 ｜ 場面: 古くなったコメントを整理したいとき
+```text
+@folder src/legacy 配下のコメントが、実際のコードの動きと合っていない箇所がないか確認してください。実装と矛盾しているコメントを見つけたら、正しい内容に修正してください。
+```
+
+## 7. 設計・アーキテクチャ
+
+### 61. 新機能の設計方針を相談する
+対象: 中級 ｜ 場面: 新機能の設計方針を相談したいとき
+```text
+「お気に入り機能」を追加したいです。@folder src の既存の構成を踏まえて、データ構造・API設計・フロントの状態管理をどう実装するのが良いか、選択肢を2〜3案示したうえでそれぞれのメリット・デメリットを教えてください。
+```
+
+### 62. フォルダ構成の見直しを検討する
+対象: 上級 ｜ 場面: フォルダ構成を見直したいとき
+```text
+@folder src の現在のディレクトリ構成が機能追加のたびに複雑になっています。機能単位（feature-based）の構成に移行する場合の新しいディレクトリ構造案を提示してください。移行は一度に行わず、段階的な手順も示してください。
+```
+
+### 63. 状態管理ライブラリの選定を相談する
+対象: 中級 ｜ 場面: 状態管理ライブラリの選定を相談したいとき
+```text
+現在propsのバケツリレーが3階層以上になっているコンポーネントがあります。@folder src/components を確認したうえで、Context APIと外部の状態管理ライブラリのどちらが適しているか、このプロジェクトの規模感を踏まえて判断してください。
+```
+
+### 64. キャッシュ戦略を設計する
+対象: 上級 ｜ 場面: キャッシュ戦略を設計するとき
+```text
+@file src/api/productApi.ts のデータ取得について、キャッシュ戦略を設計してください。更新頻度の低いマスタデータと、頻繁に変わる在庫数を分けて、それぞれ適切なキャッシュ期間と無効化のタイミングを提案してください。
+```
+
+### 65. エラーハンドリングの共通方針を決める
+対象: 上級 ｜ 場面: エラーハンドリングの共通方針を決めたいとき
+```text
+@folder src/api 全体でエラーハンドリングの書き方がバラバラです。このプロジェクト全体で統一するエラーハンドリングの方針（エラークラスの設計、ユーザーへの表示方法、ログ出力）を設計してください。
+```
+
+### 66. 新しいモジュールを疎結合に設計する
+対象: 中級 ｜ 場面: 既存システムに新しいモジュールを追加するとき
+```text
+通知機能（メール・アプリ内通知）を新たに追加します。@folder src の既存の依存関係を壊さないよう、疎結合な形でモジュールを設計してください。インターフェースの設計案を先に提示してください。
+```
+
+### 67. マイクロサービス化に向けた境界を洗い出す
+対象: 上級 ｜ 場面: マイクロサービス化を検討するとき
+```text
+@folder src の現在のモノリス構成を分析し、将来的に切り出しやすい境界（ドメインの単位）を洗い出してください。すぐに分割する前提ではなく、まずは分割しやすくするための内部的な整理案を提示してください。
+```
+
+### 68. 認証・認可の設計を確認する
+対象: 中級 ｜ 場面: 認証・認可の設計を確認したいとき
+```text
+@folder src/middleware の認証・認可周りの実装を確認し、管理者権限のチェックが漏れているエンドポイントがないか洗い出してください。権限モデルをロールベースにするかポリシーベースにするか、現状に合った方針も提案してください。
+```
+
+### 69. データベーススキーマ変更の影響範囲を洗い出す
+対象: 上級 ｜ 場面: データベーススキーマの変更を検討するとき
+```text
+@file prisma/schema.prisma を確認し、注文と商品の関係を多対多に変更する場合の影響範囲を洗い出してください。既存データを壊さないマイグレーション手順も含めて設計案を提示してください。
+```
+
+### 70. フロントとバックエンドの責務分担を整理する
+対象: 中級 ｜ 場面: フロントエンドとバックエンドの責務分担を整理したいとき
+```text
+@folder src の現状を見ると、バリデーションロジックがフロントとバックエンドで重複したり食い違ったりしています。どちらが真実のソース（source of truth）になるべきか整理し、重複を解消する設計を提案してください。
+```
+
+## 8. 学習・コード理解
+
+### 71. 初めて触るコードベースを理解する
+対象: 初心者 ｜ 場面: 初めて触るコードベースを理解したいとき
+```text
+@folder src を分析して、このプロジェクトが何をするアプリなのか、主要なフォルダがそれぞれ何を担当しているのかを、初めて見る人向けに分かりやすく説明してください。
+```
+
+### 72. 関数の動きを具体例で理解する
+対象: 初心者 ｜ 場面: 関数の動きが分からないとき
+```text
+@file src/utils/debounce.ts のdebounce関数がどう動くのか、具体的な実行例（タイムラインのイメージ）を交えて説明してください。なぜこの実装が必要なのか、使わない場合に何が起きるかも教えてください。
+```
+
+### 73. 複雑な型定義をJSONの例で理解する
+対象: 初心者 ｜ 場面: エラーの型が理解できないとき
+```text
+@file src/types/api.ts で定義されている型が複雑で読み解けません。この型がどんな形のデータを表しているのか、具体的なJSONの例を使って説明してください。
+```
+
+### 74. ライブラリの使われ方を理解する
+対象: 中級 ｜ 場面: ライブラリの使われ方を理解したいとき
+```text
+このプロジェクトで@file package.json にあるreact-queryがどう使われているか、@folder src から実際の使用箇所を探して、基本的な使い方のパターンをまとめて説明してください。
+```
+
+### 75. 処理の流れを時系列で追う
+対象: 中級 ｜ 場面: 処理の流れを追いたいとき
+```text
+ユーザーがログインボタンを押してから画面が切り替わるまでの処理の流れを、@folder src のコードを実際にたどって時系列で説明してください。関わっているファイル名も明記してください。
+```
+
+### 76. 使われている設計パターンを識別する
+対象: 中級 ｜ 場面: 設計パターンを識別したいとき
+```text
+@file src/services/paymentGateway.ts で使われている設計パターンは何か教えてください。なぜこのパターンが選ばれたと考えられるか、このプロジェクトの文脈に沿って推測も含めて説明してください。
+```
+
+### 77. パフォーマンス特性を理解する
+対象: 上級 ｜ 場面: パフォーマンス特性を理解したいとき
+```text
+@file src/utils/memoize.ts の実装が、時間計算量・空間計算量の観点でどのような特性を持つか説明してください。どういうケースで有効で、どういうケースでは逆効果になるかも教えてください。
+```
+
+### 78. カスタムフックという概念を実例で学ぶ
+対象: 初心者 ｜ 場面: 新しい概念を実例で学びたいとき
+```text
+このプロジェクトでカスタムフックという仕組みが使われていますが、まだよく理解できていません。@file src/hooks/useDebounce.ts を例に、通常の関数と何が違うのか、なぜフックとして切り出す必要があるのかを初心者向けに説明してください。
+```
+
+### 79. 依存関係の全体像を図で把握する
+対象: 中級 ｜ 場面: 依存関係の全体像を把握したいとき
+```text
+@file src/components/Checkout.tsx が依存しているモジュール・フック・APIを洗い出し、依存関係の全体像を図（Mermaid記法）で示してください。循環参照になっている箇所があれば指摘してください。
+```
+
+### 80. 過去の設計判断の経緯を推測する
+対象: 上級 ｜ 場面: 過去の設計判断の経緯を推測したいとき
+```text
+@file src/legacy/oldPaymentFlow.ts のコードは今の設計方針と大きく異なります。コミット履歴とコードの書き方から、当時どういう制約や事情があってこの設計になったと考えられるか推測して説明してください。
+```
+
+## 9. Git・PR・運用
+
+### 81. コミットメッセージを整える
+対象: 初心者 ｜ 場面: コミットメッセージを整えたいとき
+```text
+git diffで表示される変更内容を確認し、Conventional Commits形式（feat/fix/refactor等）に沿ったコミットメッセージを日本語で提案してください。変更理由が伝わる1文も添えてください。
+```
+
+### 82. プルリクエストの説明文を書く
+対象: 初心者 ｜ 場面: プルリクエストの説明文を書きたいとき
+```text
+このブランチの変更差分全体を確認し、プルリクエストのタイトルと説明文を作成してください。変更の背景・具体的な変更内容・動作確認方法の3項目に分けて書いてください。
+```
+
+### 83. マージコンフリクトを解消する
+対象: 中級 ｜ 場面: コンフリクトを解消したいとき
+```text
+mainブランチとのマージでコンフリクトが発生しています。@file （コンフリクトしているファイル）の内容を確認し、両方の変更意図を保ったまま解消する案を提示してください。どちらかを単純に消す前に、意図を確認してください。
+```
+
+### 84. 大きすぎるPRを分割する
+対象: 中級 ｜ 場面: 大きすぎるPRを分割したいとき
+```text
+このブランチの変更が大きくなりすぎてレビューしづらい状態です。git logとgit diffを確認し、意味のある単位で複数のプルリクエストに分割する方法を提案してください。分割の順序も考慮してください。
+```
+
+### 85. リリースノートを作成する
+対象: 中級 ｜ 場面: リリースノートを作成したいとき
+```text
+前回のリリースタグから現在までのコミット履歴を確認し、ユーザー向けのリリースノートを作成してください。専門用語を避け、何が新しくできるようになったかを中心にまとめてください。
+```
+
+### 86. バグ混入コミットをbisectで特定する
+対象: 上級 ｜ 場面: 特定のバグがいつ混入したか調べたいとき
+```text
+@file src/utils/calculateShipping.ts のこの計算が壊れたのがいつのコミットか調べたいです。git bisectの使い方を含めて、原因のコミットを特定する手順を教えてください。
+```
+
+### 87. ブランチ運用ルールを確認する
+対象: 初心者 ｜ 場面: ブランチ運用のルールを確認したいとき
+```text
+@file CONTRIBUTING.md （なければREADME.md）を確認し、このプロジェクトのブランチ命名規則とマージ方法のルールを教えてください。今作業している内容にはどんなブランチ名が適切か提案してください。
+```
+
+### 88. CI/CDの実行時間を短縮する
+対象: 中級 ｜ 場面: CI/CDの設定を見直したいとき
+```text
+@file .github/workflows/ci.yml を確認し、テストの実行時間を短縮する方法がないか調べてください。並列実行やキャッシュの活用で改善できる箇所があれば具体的な修正案を提示してください。
+```
+
+### 89. 誤ってコミットした秘密情報に対処する
+対象: 中級 ｜ 場面: 誤ってコミットした秘密情報を扱うとき
+```text
+直前のコミットに誤ってAPIキーを含めてしまいました。まだリモートにpushしていない前提で、安全に取り消して再コミットする手順を教えてください。pushしている場合の対応方法も併せて教えてください。
+```
+
+### 90. Cloud Agentでバックグラウンドタスクを回す
+対象: 上級 ｜ 場面: Cloud Agentでバックグラウンドタスクを回すとき
+```text
+このリポジトリの依存パッケージの脆弱性チェックと、軽微なlintエラーの一括修正を、Cloud Agentでバックグラウンドタスクとして実行してください。完了後は変更内容をプルリクエストとしてまとめてください。
+```
+
+## 10. 生産性・自動化(Agent/MCP活用)
+
+### 91. 複数ファイルのJSDocを一括で補完する
+対象: 初心者 ｜ 場面: 複数ファイルにまたがる単純作業を任せたいとき
+```text
+@folder src/components 内の全コンポーネントで、propsの型定義にJSDocコメントが付いていないものを探し、それぞれ簡潔な説明を追加してください。Agentモードで一括対応してください。
+```
+
+### 92. 表記ゆれを一括で直す
+対象: 初心者 ｜ 場面: 表記ゆれを一括で直したいとき
+```text
+@folder src 全体で「ユーザー」と「ユーザ」の表記が混在しています。UIに表示される文言をすべて「ユーザー」に統一してください。変数名やコード内の識別子は変更しないでください。
+```
+
+### 93. 複数の小さな修正をまとめて依頼する
+対象: 中級 ｜ 場面: 複数の小さな修正をまとめて任せたいとき
+```text
+以下の3件を順番に対応してください。1) @file src/utils/logger.ts のconsole.logをloggerに置き換え、2) @file src/config/env.ts の未使用の環境変数を削除、3) @file package.json のバージョン番号を更新。それぞれ完了後に何を変更したか報告してください。
+```
+
+### 94. Figma MCPでデザインからコードを生成する
+対象: 中級 ｜ 場面: MCPでデザインファイルからコードを生成したいとき
+```text
+Figma MCPで@（対象のFigmaリンク）のデザインを取得し、@folder src/components の既存コンポーネントの実装パターンに合わせてReactコンポーネントとして実装してください。デザイントークンは@file src/styles/tokens.ts のものを使ってください。
+```
+
+### 95. Web検索で最新の非推奨情報を反映する
+対象: 中級 ｜ 場面: Web検索を活用して最新情報を反映したいとき
+```text
+@web で使用しているライブラリの最新の非推奨（deprecated）情報を確認し、@folder src 内でそのAPIを使っている箇所があれば洗い出してください。見つかった場合は推奨される代替方法への置き換え案を提示してください。
+```
+
+### 96. 定型作業をSkillとして仕組み化する
+対象: 上級 ｜ 場面: 定型作業をSkillとして仕組み化したいとき
+```text
+新しいAPIエンドポイントを追加するたびに、ルーティング登録・バリデーション・テストファイル作成という同じ手順を繰り返しています。この手順をCursorのSkillとして定義し、次回からは要件を伝えるだけで一連の作業が実行できるようにしてください。
+```
+
+### 97. Hookでコミット前チェックを自動化する
+対象: 中級 ｜ 場面: 定期的なチェックをHookで自動化したいとき
+```text
+コミット前に必ずlintとフォーマットチェックを走らせたいです。pre-commitのHookを設定し、エラーがある場合はコミットをブロックするようにしてください。既存のnpm scriptsを活用してください。
+```
+
+### 98. 複数のAgentタスクを並行で走らせる
+対象: 上級 ｜ 場面: 複数のAgentタスクを並行で走らせたいとき
+```text
+以下の2つの作業を並行して進めてください。1) @folder src/api のエラーハンドリング統一、2) @folder src/components のアクセシビリティ改善。それぞれ独立したブランチで作業し、完了後に差分をまとめて報告してください。
+```
+
+### 99. Grok 4.5で大規模な一括修正をコストを抑えて進める
+対象: 上級 ｜ 場面: Grok 4.5でコストを抑えつつ大規模なリファクタリングをするとき
+```text
+モデルをGrok 4.5に切り替えた状態で進めてください。@folder src 全体を対象に、非推奨になったuseEffectの依存配列の書き方を、プロジェクトのESLintルールに沿った形に一括修正してください。変更ファイル数が多いため、まず対象ファイル一覧を提示してから着手してください。
+```
+
+### 100. 大規模リポジトリの棚卸しを任せる
+対象: 上級 ｜ 場面: 大規模なリポジトリの棚卸しを任せたいとき
+```text
+@folder src 全体を分析し、直近半年間で一度も変更されておらず、かつどこからも参照されていないファイルの一覧を作成してください。削除候補として提示するだけにとどめ、実際の削除は行わないでください。
+```
+</pre>
+<footer>各項目のコピーボタンで1つずつ受け取れます。まとめて欲しいときは上の「全件ダウンロード」から。<br>GitHubの <a href="./kit/prompts-100.md">kit/prompts-100.md</a> からも受け取れます。</footer></div>
+<script>
+function copyTextWithFallback(text){function fallback(){try{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();return ok;}catch(e){return false;}}if(navigator.clipboard&&navigator.clipboard.writeText){return navigator.clipboard.writeText(text).then(()=>true).catch(fallback);}return Promise.resolve(fallback());}
+function showCopyResult(btn,ok){const orig=btn.dataset.orig||btn.textContent;btn.dataset.orig=orig;btn.textContent=ok?'✔ コピーしました！':'✖ コピー不可。⬇ ダウンロードをご利用ください';setTimeout(()=>{btn.textContent=orig;},ok?1800:3500);}
+async function copyPrompt(id,btn){const ok=await copyTextWithFallback(document.getElementById(id).textContent);showCopyResult(btn,ok);}
+function downloadText(id,filename,btn){try{const text=document.getElementById(id).textContent;const blob=new Blob([text],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);}catch(e){if(btn){const o=btn.textContent;btn.textContent='✖ 保存不可。上のコピーをご利用ください';setTimeout(()=>{btn.textContent=o;},3500);}}}
+</script></body></html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>🎁 職種別Cursor活用術100選</title><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=M+PLUS+Rounded+1c:wght@500;700;800&display=swap" rel="stylesheet"><style>
+:root{
+  --brand:#D9774F; --brand-deep:#C15640; --brand-soft:rgba(217,119,79,.12); --brand-line:rgba(217,119,79,.30);
+  --accent:#D9774F; --accent-deep:#B24E33; --accent-soft:rgba(217,119,79,.16);
+  --bg:#F1ECE3; --paper:#FBF8F2; --ink:#2A2620; --ink-mid:#6E6557; --line:#E4D9C7;
+  --head:'M PLUS Rounded 1c';
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans JP',-apple-system,'Hiragino Sans','Yu Gothic',sans-serif;line-height:1.7;}
+.doc{max-width:900px;margin:0 auto;background:var(--paper);box-shadow:0 0 60px rgba(0,0,0,.10);min-height:100vh;}
+.hero{position:relative;background:linear-gradient(160deg,var(--brand-soft) 0%,var(--bg) 70%);padding:40px 46px 32px;border-bottom:3px solid var(--brand-line);overflow:hidden;}
+.hero .coin{position:absolute;width:150px;height:150px;border-radius:50%;background:var(--accent);opacity:.15;top:-50px;right:-30px;}
+.chan{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.eyebrow{font-family:var(--head);font-weight:800;color:var(--brand-deep);letter-spacing:2px;font-size:12px;display:inline-block;margin-bottom:8px;}
+h1{font-family:var(--head);font-weight:800;font-size:30px;line-height:1.28;color:var(--ink);}
+h1 .hl{color:var(--brand-deep);}
+.hero p.sub{font-size:15px;color:var(--ink-mid);font-weight:700;margin-top:10px;max-width:680px;}
+.back{display:inline-block;margin-top:14px;font-size:13px;font-weight:700;color:var(--brand-deep);text-decoration:none;background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:6px 16px;}
+.back:hover{border-color:var(--brand);}
+.navbar{position:sticky;top:0;z-index:5;background:var(--brand-soft);border-bottom:1px solid var(--line);padding:12px 46px;display:flex;flex-wrap:wrap;gap:7px;}
+.navbar a{font-size:12px;font-weight:700;color:var(--ink);text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 12px;}
+.navbar a:hover{border-color:var(--brand);}
+.toolbar{padding:16px 46px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--line);}
+.count{font-family:var(--head);font-weight:800;color:var(--brand-deep);font-size:15px;}
+.cat{padding:26px 46px 8px;}
+.cat h2{font-family:var(--head);font-weight:800;font-size:21px;color:var(--ink);border-left:5px solid var(--accent);padding-left:12px;}
+.icards{padding:6px 46px 20px;display:flex;flex-direction:column;gap:14px;}
+.icard{background:var(--bg);border:1.5px solid var(--line);border-radius:13px;padding:16px 18px;}
+.ititle{font-family:var(--head);font-weight:800;font-size:16px;color:var(--ink);margin-bottom:4px;}
+.imeta{font-size:12.5px;color:var(--ink-mid);margin-bottom:10px;}
+pre.prompt{background:var(--ink);color:#ECECEA;border-radius:10px;padding:14px 16px;white-space:pre-wrap;word-break:break-word;font-family:ui-monospace,Menlo,monospace;font-size:13px;line-height:1.6;max-height:340px;overflow-y:auto;}
+.btns{margin-top:10px;display:flex;gap:9px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:7px;background:var(--accent);border:2px solid var(--accent-deep);color:var(--ink);border-radius:999px;padding:8px 18px;font-family:var(--head);font-weight:800;font-size:13px;cursor:pointer;text-decoration:none;}
+.btn.ghost{background:var(--paper);border:1.5px solid var(--line);color:var(--brand-deep);}
+.btn.lg{font-size:15px;padding:11px 26px;}
+.linkcards{padding:8px 46px 30px;display:flex;flex-direction:column;gap:14px;}
+.linkcard{border:1.5px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--bg);}
+.linkcard.accent{border:2px solid var(--brand);background:var(--paper);}
+.linkcard .lt{flex:1;}
+.linkcard .lt b{font-family:var(--head);font-weight:800;font-size:17px;color:var(--ink);display:block;}
+.linkcard .lt span{font-size:13px;color:var(--ink-mid);}
+.linkcard .cnt{font-family:var(--head);font-weight:800;color:var(--accent-deep);background:var(--accent-soft);border-radius:999px;padding:4px 12px;font-size:13px;white-space:nowrap;}
+section.info{padding:28px 46px;border-top:1px solid var(--line);}
+section.info h2{font-family:var(--head);font-weight:800;font-size:20px;color:var(--ink);margin-bottom:12px;}
+section.info ol{margin-left:20px;font-size:15px;color:var(--ink);} section.info li{margin-bottom:7px;}
+.box{background:var(--accent-soft);border:1.5px solid var(--accent);border-radius:12px;padding:16px 20px;margin-top:14px;}
+.box b{color:var(--brand-deep);}
+footer{background:var(--ink);color:#EBEBE7;padding:26px 46px;font-size:12.5px;line-height:1.8;}
+footer a{color:var(--accent);text-decoration:none;}
+</style></head>
+<body><div class="doc"><div class="hero"><span class="coin"></span><div class="chan"><img src="data:image/jpeg;base64,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" alt="ClaudeCode" style="width:46px;height:46px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.16);"></div><div class="eyebrow">PRESENT KIT</div><h1>🎁 <span class="hl">職種別Cursor活用術100選</span></h1><p class="sub">10職種×各10個。自分の職種の章から探すか、ブラウザのページ内検索（Ctrl/⌘+F）で職種名を検索して使ってください。</p><a class="back" href="./present.html">← プレゼント一覧に戻る</a></div>
+<div class="navbar"><a href="#jpc1">1. エンジニア(Web/アプリ)</a><a href="#jpc2">2. データアナリスト・データサイエンティスト</a><a href="#jpc3">3. マーケター</a><a href="#jpc4">4. 営業</a><a href="#jpc5">5. 経営者・個人事業主</a><a href="#jpc6">6. デザイナー</a><a href="#jpc7">7. ライター・編集者</a><a href="#jpc8">8. 事務・バックオフィス</a><a href="#jpc9">9. カスタマーサポート</a><a href="#jpc10">10. 学生・学習者</a></div><div class="toolbar"><span class="count">全100個収録</span><button class="btn ghost" onclick="downloadText('jpfull','cursor-jobs-100.md', this)">⬇ 全件まとめてダウンロード（.md）</button></div>
+<div class="cat" id="jpc1"><h2>1. エンジニア(Web/アプリ)</h2></div><div class="icards"><div class="icard"><div class="ititle">1. Plan modeで実装前の設計レビュー</div><div class="imeta">職種: エンジニア(Web/アプリ) ｜ 場面: 新機能の実装に着手する前に、影響範囲と手順を先にすり合わせたいとき</div><pre class="prompt" id="jp1">新しいユーザー通知機能を追加したい。Plan modeで、既存のコード構成を踏まえた実装手順と変更が必要なファイル一覧を先に出してほしい。まだコードは書かず、手順に問題がないか確認してから実装に進みたい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp1', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">2. Agentでバグ修正からテスト追加まで一括依頼</div><div class="imeta">職種: エンジニア(Web/アプリ) ｜ 場面: 再現手順のあるバグ報告を受けて修正するとき</div><pre class="prompt" id="jp2">このバグレポートの再現手順に沿って原因を特定し、修正してほしい。修正後は同じ不具合が再発しないように、該当箇所のテストも追加してほしい。修正した理由も簡単にコメントで残してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp2', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">3. @docsで社内API仕様書を参照させながら実装</div><div class="imeta">職種: エンジニア(Web/アプリ) ｜ 場面: 社内の独自APIを呼び出す機能を実装するとき</div><pre class="prompt" id="jp3">@docs で登録している社内API仕様書を参照しながら、注文ステータス更新エンドポイントを呼び出す処理を実装してほしい。仕様書に書かれているエラーコードの扱いも漏れなく反映してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp3', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">4. MCPでGitHub Issueを取得して着手</div><div class="imeta">職種: エンジニア(Web/アプリ) ｜ 場面: Issueの内容確認とコーディングを行き来せず一気に進めたいとき</div><pre class="prompt" id="jp4">GitHub連携のMCPで担当中のIssue一覧を取得して、優先度が高いものから内容を教えてほしい。内容を確認したら、そのまま該当Issueの実装に着手してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp4', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">5. Cloud Agentにリファクタリングをバックグラウンドで依頼</div><div class="imeta">職種: エンジニア(Web/アプリ) ｜ 場面: 手元の作業を止めずに大規模なコード整理を進めたいとき</div><pre class="prompt" id="jp5">utilsフォルダ内の重複しているバリデーション処理を1つの共通関数にまとめるリファクタリングを、Cloud Agentでバックグラウンド実行してほしい。完了したら差分をまとめて教えてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp5', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">6. @webで最新のライブラリ仕様変更を調べさせる</div><div class="imeta">職種: エンジニア(Web/アプリ) ｜ 場面: 依存ライブラリをアップデートする前に破壊的変更を確認したいとき</div><pre class="prompt" id="jp6">使用しているライブラリを最新版に上げたい。@web でこのライブラリの直近のメジャーアップデート内容を調べて、今のコードに影響する破壊的変更がないか確認してほしい。あれば対応方針も提案してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp6', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">7. コーディング規約をSkillsに登録して一貫性を保つ</div><div class="imeta">職種: エンジニア(Web/アプリ) ｜ 場面: チームメンバーによって実装スタイルがばらつくとき</div><pre class="prompt" id="jp7">このプロジェクトの命名規則・ディレクトリ構成・エラーハンドリングの書き方をまとめてSkillとして登録したい。今後の実装依頼では、このSkillの内容に沿ったコードを提案してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp7', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">8. コミット前のセルフレビューを依頼</div><div class="imeta">職種: エンジニア(Web/アプリ) ｜ 場面: プルリクエストを出す前に自分の変更を客観的に見直したいとき</div><pre class="prompt" id="jp8">今回の変更差分を、レビュアーの視点でセルフレビューしてほしい。可読性・命名・エッジケースの考慮漏れがないか指摘してほしい。指摘だけでよく、勝手に修正はしないでほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp8', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">9. マイグレーションスクリプトとロールバック手順の作成</div><div class="imeta">職種: エンジニア(Web/アプリ) ｜ 場面: データベースのスキーマ変更を安全に進めたいとき</div><pre class="prompt" id="jp9">usersテーブルにemail_verified_atカラムを追加するマイグレーションを作成してほしい。あわせて、問題が起きたときに戻せるロールバック用のスクリプトと、実行手順のメモも用意してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp9', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">10. 障害調査でログとコードを横断的に確認</div><div class="imeta">職種: エンジニア(Web/アプリ) ｜ 場面: 本番環境で発生したエラーの原因を特定するとき</div><pre class="prompt" id="jp10">このエラーログを渡すので、関連するコードを横断的に確認して、発生しうる原因の候補を挙げてほしい。可能性が高い順に並べて、それぞれの確認方法も教えてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp10', this)">📋 コピー</button></div></div></div><div class="cat" id="jpc2"><h2>2. データアナリスト・データサイエンティスト</h2></div><div class="icards"><div class="icard"><div class="ititle">11. CSVの列名統一とデータクレンジング</div><div class="imeta">職種: データアナリスト・データサイエンティスト ｜ 場面: 複数部署から集まったCSVの表記ゆれを整えるとき</div><pre class="prompt" id="jp11">この3つのCSVファイル、部署ごとに列名や日付の書式がバラバラになっている。列名を統一し、日付をYYYY-MM-DD形式に揃えて、1つのファイルにまとめてほしい。処理内容は簡単なメモとして残してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp11', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">12. 分析用スクリプトを自然言語で組み立てる</div><div class="imeta">職種: データアナリスト・データサイエンティスト ｜ 場面: 集計ロジックを自分でコーディングせずに実現したいとき</div><pre class="prompt" id="jp12">このCSVから、月別・商品カテゴリ別の売上合計と前月比を出すスクリプトを作ってほしい。専門的なコードの中身は分からなくてもいいので、実行結果がすぐ確認できるようにしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp12', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">13. 複数Excelの統合とマスタ作成</div><div class="imeta">職種: データアナリスト・データサイエンティスト ｜ 場面: 支店ごとのExcelを1つの分析用マスタにまとめるとき</div><pre class="prompt" id="jp13">このフォルダにある支店別の顧客リストExcelを、1つのマスタファイルに統合してほしい。支店名の列を追加し、重複している顧客はIDで名寄せしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp13', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">14. 異常値検出ロジックの相談と実装</div><div class="imeta">職種: データアナリスト・データサイエンティスト ｜ 場面: 分析対象データに含まれる外れ値を機械的に見つけたいとき</div><pre class="prompt" id="jp14">この売上データの中で、明らかに入力ミスと思われる異常値を検出したい。どんな基準で判定するのが妥当か提案したうえで、検出結果をハイライトしたファイルを作ってほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp14', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">15. 分析結果をレポート形式のMarkdownにまとめる</div><div class="imeta">職種: データアナリスト・データサイエンティスト ｜ 場面: 分析結果を上司や他部署に共有するとき</div><pre class="prompt" id="jp15">先ほどの分析結果を、背景・分析方法・結果・示唆の4段落構成でMarkdownレポートにまとめてほしい。専門用語には簡単な補足を添えて、非エンジニアの上司にも伝わる書き方にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp15', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">16. SQLクエリの生成とパフォーマンス改善</div><div class="imeta">職種: データアナリスト・データサイエンティスト ｜ 場面: 複雑な集計をSQLで書きたいが自信がないとき</div><pre class="prompt" id="jp16">注文テーブルと顧客テーブルを結合して、顧客ごとの累計購入額と最終購入日を出すSQLを書いてほしい。実行に時間がかかりそうな箇所があれば、インデックスの提案も含めて教えてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp16', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">17. @webで最新の統計手法を調べてから分析設計</div><div class="imeta">職種: データアナリスト・データサイエンティスト ｜ 場面: 使ったことのない分析手法を検討するとき</div><pre class="prompt" id="jp17">このユーザー離脱データに使えそうな分析手法を @web で調べてほしい。いくつか候補を比較して、今回のデータ量と目的に合う手法を1つ提案してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp17', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">18. ダッシュボード用の集計スクリプトを自動生成</div><div class="imeta">職種: データアナリスト・データサイエンティスト ｜ 場面: 毎週手作業で行っている集計を仕組み化したいとき</div><pre class="prompt" id="jp18">毎週手作業でやっているKPI集計を自動化したい。元データのCSVを渡すので、同じ形式で更新すれば毎回同じ集計結果が出力されるスクリプトを作ってほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp18', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">19. Plan modeで分析手順を先に確認してから実行</div><div class="imeta">職種: データアナリスト・データサイエンティスト ｜ 場面: 分析の方向性を間違えないよう事前にすり合わせたいとき</div><pre class="prompt" id="jp19">このデータから解約要因を分析したい。Plan modeで、どういう手順で進めるつもりか先に説明してほしい。手順に納得できたら実行を依頼する。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp19', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">20. 週次レポートのテンプレート化と自動更新</div><div class="imeta">職種: データアナリスト・データサイエンティスト ｜ 場面: 毎週同じ形式のレポートを作り続けているとき</div><pre class="prompt" id="jp20">毎週提出しているレポートのフォーマットをテンプレート化したい。今週分のデータを渡すので、このテンプレートに沿って数値と簡単なコメントを埋めたレポートを作ってほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp20', this)">📋 コピー</button></div></div></div><div class="cat" id="jpc3"><h2>3. マーケター</h2></div><div class="icards"><div class="icard"><div class="ititle">21. LP文言のA/Bパターン生成</div><div class="imeta">職種: マーケター ｜ 場面: ランディングページのキャッチコピーを複数案検討したいとき</div><pre class="prompt" id="jp21">この商品のLPに使うキャッチコピーを5パターン考えてほしい。ターゲットは30代の子育て世代で、価格の安さより時短効果を訴求したい。誇張表現は避けて、具体的な数字を入れてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp21', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">22. 競合サイトの調査と比較表作成</div><div class="imeta">職種: マーケター ｜ 場面: 競合の料金プランやサービス内容を横並びで比較したいとき</div><pre class="prompt" id="jp22">この3社の競合サイトを調べて、料金プラン・主要機能・ターゲット層を比較表にまとめてほしい。自社との違いが一目で分かるように整理してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp22', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">23. SNS投稿文を媒体別トーンで一括生成</div><div class="imeta">職種: マーケター ｜ 場面: 同じ告知を複数のSNSに投稿する準備をするとき</div><pre class="prompt" id="jp23">このキャンペーン告知文をもとに、X用・Instagram用・LINE公式アカウント用の投稿文をそれぞれ作ってほしい。媒体ごとの文字数と読者のトーンの違いを意識して書き分けてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp23', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">24. キーワードリストからSEO記事構成案を作る</div><div class="imeta">職種: マーケター ｜ 場面: 新しいオウンドメディア記事の企画を立てるとき</div><pre class="prompt" id="jp24">このキーワードリストをもとに、検索意図別に記事テーマを分類してほしい。優先度が高そうなテーマを3つ選び、それぞれ見出し構成案を作ってほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp24', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">25. 広告文のコピーバリエーション量産</div><div class="imeta">職種: マーケター ｜ 場面: 広告配信で複数パターンのテストをしたいとき</div><pre class="prompt" id="jp25">このリスティング広告の見出しを、訴求軸を変えて10パターン作ってほしい。価格訴求・機能訴求・悩み解決訴求の3タイプに分けて、それぞれ文字数制限内で収めてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp25', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">26. アクセス解析データの傾向要約</div><div class="imeta">職種: マーケター ｜ 場面: アクセス解析ツールから出力したCSVの傾向を素早く把握したいとき</div><pre class="prompt" id="jp26">このアクセス解析のCSVを見て、先月と比べて流入が増減しているページと、その要因として考えられることを教えてほしい。専門用語は使わず、施策の判断材料になる形でまとめてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp26', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">27. @webでトレンドを調べてコンテンツカレンダー作成</div><div class="imeta">職種: マーケター ｜ 場面: 来月分のコンテンツ企画を立てるとき</div><pre class="prompt" id="jp27">@web で今このジャンルで話題になっているトピックを調べてほしい。それをもとに、来月分のブログ・SNS投稿のコンテンツカレンダー案を作ってほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp27', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">28. メールマガジンの下書き作成とパーソナライズ</div><div class="imeta">職種: マーケター ｜ 場面: 定期配信するメルマガの本文を用意するとき</div><pre class="prompt" id="jp28">今月の新機能リリースを伝えるメルマガの下書きを作ってほしい。既存顧客向けと休眠顧客向けで、書き出しの一文だけ変えたパターンをそれぞれ用意してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp28', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">29. ペルソナ設計シートの作成</div><div class="imeta">職種: マーケター ｜ 場面: 新商品のターゲット像を社内で共有するとき</div><pre class="prompt" id="jp29">この商品のアンケート回答データをもとに、代表的な顧客像を2〜3パターンのペルソナシートにまとめてほしい。年齢・悩み・購買のきっかけを具体的に書いてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp29', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">30. キャンペーン結果レポートの自動整形</div><div class="imeta">職種: マーケター ｜ 場面: 広告運用結果を社内報告用にまとめるとき</div><pre class="prompt" id="jp30">この広告運用の実績CSVを、社内報告用のレポート形式に整形してほしい。目標に対する達成率と、次回への改善案も1〜2点添えてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp30', this)">📋 コピー</button></div></div></div><div class="cat" id="jpc4"><h2>4. 営業</h2></div><div class="icards"><div class="icard"><div class="ititle">31. 商談メモから提案書のたたき台作成</div><div class="imeta">職種: 営業 ｜ 場面: 商談直後にメモをもとに提案資料を作るとき</div><pre class="prompt" id="jp31">今日の商談メモを渡すので、先方の課題・自社サービスでの解決策・想定効果の3構成で提案書のたたき台を作ってほしい。専門用語は避けて、先方の担当者にそのまま見せられる文章にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp31', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">32. 顧客リストのCSV整形と優先度付け</div><div class="imeta">職種: 営業 ｜ 場面: 展示会で集めた名刺リストを架電優先順に整理するとき</div><pre class="prompt" id="jp32">このExcelの顧客リスト、会社名や部署名の表記がバラバラなので統一してほしい。そのうえで、業種と従業員規模をもとに架電の優先順位を付けてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp32', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">33. 商談前の企業リサーチを一括実施</div><div class="imeta">職種: 営業 ｜ 場面: 初回商談の前に相手企業について事前調査するとき</div><pre class="prompt" id="jp33">明日商談予定のこの会社について、事業内容・最近のニュース・想定される課題を調べてほしい。商談の冒頭で使える話のきっかけも2〜3個提案してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp33', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">34. トークスクリプトの想定問答集作成</div><div class="imeta">職種: 営業 ｜ 場面: 新商品の提案で聞かれそうな質問に備えるとき</div><pre class="prompt" id="jp34">この新商品を提案する際に、顧客から聞かれそうな質問と回答例を想定問答集としてまとめてほしい。価格・導入期間・既存システムとの連携についての質問は特に厚めに用意してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp34', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">35. 見積書テンプレートへのデータ流し込み</div><div class="imeta">職種: 営業 ｜ 場面: 案件ごとに見積書を毎回手作業で作っているとき</div><pre class="prompt" id="jp35">この見積書テンプレートに、案件情報のCSVを流し込んで案件ごとの見積書を一括作成してほしい。金額の桁区切りと消費税計算は必ずチェックしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp35', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">36. 商談議事録の要約とネクストアクション抽出</div><div class="imeta">職種: 営業 ｜ 場面: 長時間の商談メモから要点だけ拾いたいとき</div><pre class="prompt" id="jp36">この商談の文字起こしメモを、決定事項・保留事項・次回までのネクストアクションの3つに分けて要約してほしい。誰が何をいつまでにやるかが分かる形にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp36', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">37. メール返信文のドラフト作成</div><div class="imeta">職種: 営業 ｜ 場面: 見積もり後の値引き交渉メールへの返信を考えるとき</div><pre class="prompt" id="jp37">この顧客からの値引き依頼メールに対する返信文を考えてほしい。値引きはできないが代わりにサポート期間を延長する提案をしたい。丁寧だが機械的にならない文面にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp37', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">38. 失注理由の分類とタグ付け</div><div class="imeta">職種: 営業 ｜ 場面: 四半期の失注案件を振り返るとき</div><pre class="prompt" id="jp38">このExcelにある失注案件の備考欄をもとに、失注理由をいくつかのカテゴリに分類してタグ付けしてほしい。カテゴリごとの件数も集計してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp38', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">39. 提案資料の業界別カスタマイズ</div><div class="imeta">職種: 営業 ｜ 場面: 同じ商品を異なる業界の顧客に提案するとき</div><pre class="prompt" id="jp39">このベースの提案資料を、製造業向けと小売業向けにそれぞれカスタマイズしてほしい。事例部分と課題の切り口を業界に合わせて変えてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp39', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">40. 顧客からのFAQ対応集の作成</div><div class="imeta">職種: 営業 ｜ 場面: よく聞かれる質問への回答を毎回考え直しているとき</div><pre class="prompt" id="jp40">これまでの商談で顧客からよく聞かれた質問をまとめたメモを渡すので、それをFAQ集として整理してほしい。営業チーム内で共有できる形式にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp40', this)">📋 コピー</button></div></div></div><div class="cat" id="jpc5"><h2>5. 経営者・個人事業主</h2></div><div class="icards"><div class="icard"><div class="ititle">41. 事業計画書のたたき台作成</div><div class="imeta">職種: 経営者・個人事業主 ｜ 場面: 融資や補助金申請のために事業計画書を用意するとき</div><pre class="prompt" id="jp41">この事業の概要メモをもとに、事業計画書のたたき台を作ってほしい。事業内容・市場環境・収支計画・今後の展望の構成で、金融機関の担当者が読んでも分かる文章にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp41', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">42. 経費データの分類と月次サマリー作成</div><div class="imeta">職種: 経営者・個人事業主 ｜ 場面: 月末に経費を整理して顧問税理士に渡す前に確認するとき</div><pre class="prompt" id="jp42">この月の経費明細CSVを、勘定科目ごとに分類してほしい。分類に迷いそうな項目はコメントを付けて、税理士に確認すべき点として一覧にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp42', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">43. 契約書のチェックポイント洗い出し</div><div class="imeta">職種: 経営者・個人事業主 ｜ 場面: 取引先から届いた契約書を確認するとき（最終判断は専門家に確認する前提）</div><pre class="prompt" id="jp43">この契約書案を読んで、一般的に確認しておいた方がよさそうな条項(支払条件・解約条項・損害賠償の範囲など)を洗い出してほしい。法的な最終判断は弁護士に確認するので、あくまで確認観点の整理をお願いしたい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp43', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">44. 採用要項・求人票の作成</div><div class="imeta">職種: 経営者・個人事業主 ｜ 場面: 新しいメンバーを募集するとき</div><pre class="prompt" id="jp44">このポジションのざっくりした要件メモをもとに、求人媒体に掲載する求人票を作ってほしい。仕事内容・求めるスキル・働き方の3項目に整理し、応募したくなる書き出しにしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp44', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">45. 競合分析と市場調査の一括実施</div><div class="imeta">職種: 経営者・個人事業主 ｜ 場面: 新規事業の検討段階で市場感を把握したいとき</div><pre class="prompt" id="jp45">このジャンルの市場規模と主要な競合について調べてほしい。競合の強み・弱みと、自分の事業がどこで差別化できそうかも合わせて整理してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp45', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">46. 議事録から意思決定事項の抽出</div><div class="imeta">職種: 経営者・個人事業主 ｜ 場面: 経営会議の内容を後で振り返れる形にしておきたいとき</div><pre class="prompt" id="jp46">この経営会議の議事メモから、決まったことと保留になったことを分けて整理してほしい。決定事項には担当者と期限も明記してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp46', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">47. 資金繰り表のスプレッドシート作成</div><div class="imeta">職種: 経営者・個人事業主 ｜ 場面: 今後数ヶ月の資金繰りを見通したいとき</div><pre class="prompt" id="jp47">今の売上と経費の実績データをもとに、今後6ヶ月分の資金繰り表を作ってほしい。月ごとの入出金と残高が一目で分かる形式にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp47', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">48. 社内規程・マニュアルの下書き作成</div><div class="imeta">職種: 経営者・個人事業主 ｜ 場面: 従業員が増えてルールを明文化する必要が出てきたとき</div><pre class="prompt" id="jp48">今は口頭で伝えている経費精算のルールを、社内マニュアルとして文書化したい。箇条書きで分かりやすく、新しく入った人でも読めば理解できる書き方にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp48', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">49. ピッチ資料の構成案作成</div><div class="imeta">職種: 経営者・個人事業主 ｜ 場面: 投資家や取引先向けのピッチ資料を準備するとき</div><pre class="prompt" id="jp49">この事業の説明メモをもとに、5分で話せるピッチ資料の構成案を作ってほしい。課題・解決策・市場規模・実績・今後の計画のスライド構成で、各スライドに入れる要点も書いてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp49', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">50. カレンダーとタスクの連携管理</div><div class="imeta">職種: 経営者・個人事業主 ｜ 場面: 複数の予定とタスクを一元管理したいとき</div><pre class="prompt" id="jp50">連携しているカレンダーとタスク管理ツールから、今週の予定と未完了タスクを取得してほしい。優先度が高そうな順に並べ替えて、1日の中でどう配分すればよいか提案してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp50', this)">📋 コピー</button></div></div></div><div class="cat" id="jpc6"><h2>6. デザイナー</h2></div><div class="icards"><div class="icard"><div class="ititle">51. デザインシステムのトークン定義ファイル管理</div><div class="imeta">職種: デザイナー ｜ 場面: 色やフォントサイズなどのデザイン変数を整理したいとき</div><pre class="prompt" id="jp51">現在バラバラに管理している色・余白・フォントサイズの値を、1つのデザイントークンファイルにまとめてほしい。命名規則は分かりやすく統一してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp51', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">52. デザイン仕様からHTML/CSS実装への橋渡し</div><div class="imeta">職種: デザイナー ｜ 場面: デザインの意図をエンジニアに正確に伝えたいとき</div><pre class="prompt" id="jp52">このデザインの余白・色・フォントの指定を、実装側が迷わないように仕様書としてまとめてほしい。数値は具体的なピクセル値やカラーコードで書いてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp52', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">53. デザインレビュー用チェックリスト作成</div><div class="imeta">職種: デザイナー ｜ 場面: 複数人でデザインレビューを行う前の準備をするとき</div><pre class="prompt" id="jp53">このプロジェクトのデザインレビューで確認すべき項目を、チェックリスト形式で作ってほしい。視認性・余白の一貫性・アクセシビリティの観点を必ず含めてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp53', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">54. カラーパレット・タイポグラフィのドキュメント化</div><div class="imeta">職種: デザイナー ｜ 場面: ブランドガイドラインを整備するとき</div><pre class="prompt" id="jp54">今使っているカラーパレットとフォント一覧を、他のメンバーが参照できるドキュメントにまとめてほしい。それぞれどんな場面で使うかの説明も添えてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp54', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">55. アセット命名規則の統一とリネーム作業</div><div class="imeta">職種: デザイナー ｜ 場面: 大量の画像ファイルの命名がバラバラになっているとき</div><pre class="prompt" id="jp55">このフォルダ内の画像ファイル名がバラバラなので、統一した命名規則でリネームしてほしい。用途・サイズ・バージョンが分かる形式にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp55', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">56. デザイン変更履歴のMarkdownまとめ</div><div class="imeta">職種: デザイナー ｜ 場面: デザインの変更経緯を後から追えるようにしておきたいとき</div><pre class="prompt" id="jp56">今回のリニューアルで変更した箇所を、変更前・変更後・変更理由の形式でMarkdownにまとめてほしい。後からチームで振り返るときに使いたい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp56', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">57. 最新UIトレンドを調べてムードボード構成案作成</div><div class="imeta">職種: デザイナー ｜ 場面: 新しいデザインの方向性を検討し始めるとき</div><pre class="prompt" id="jp57">@web でこのジャンルのサービスの最近のUIデザイン傾向を調べてほしい。参考になりそうな要素をいくつかピックアップして、ムードボードの構成案として整理してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp57', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">58. クライアント向け提案資料の構成作成</div><div class="imeta">職種: デザイナー ｜ 場面: デザイン提案をクライアントにプレゼンする準備をするとき</div><pre class="prompt" id="jp58">このデザイン案をクライアントに説明するプレゼン資料の構成を作ってほしい。デザインの意図と、依頼内容にどう応えているかが伝わる流れにしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp58', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">59. アクセシビリティチェック項目の洗い出し</div><div class="imeta">職種: デザイナー ｜ 場面: デザインが幅広いユーザーに配慮できているか確認したいとき</div><pre class="prompt" id="jp59">このデザインについて、色のコントラストや文字サイズなど、アクセシビリティの観点で確認すべき項目を洗い出してほしい。問題がありそうな箇所があれば具体的に指摘してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp59', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">60. コンポーネント仕様書の自動生成</div><div class="imeta">職種: デザイナー ｜ 場面: デザインしたUIコンポーネントの仕様をドキュメント化するとき</div><pre class="prompt" id="jp60">このボタンコンポーネントについて、サイズ違い・状態違い(通常・ホバー・無効)ごとの仕様を一覧表にまとめてほしい。実装担当者がそのまま参照できる形式にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp60', this)">📋 コピー</button></div></div></div><div class="cat" id="jpc7"><h2>7. ライター・編集者</h2></div><div class="icards"><div class="icard"><div class="ititle">61. 記事構成案の作成とアウトライン整理</div><div class="imeta">職種: ライター・編集者 ｜ 場面: 執筆前に記事全体の構成を固めたいとき</div><pre class="prompt" id="jp61">このテーマで記事を書きたい。想定読者は初心者で、読了後に「何をすればいいか分かる」状態にしたい。見出し構成案を3パターン作ってほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp61', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">62. 誤字脱字・表記ゆれの一括チェック</div><div class="imeta">職種: ライター・編集者 ｜ 場面: 入稿前に原稿を最終確認するとき</div><pre class="prompt" id="jp62">この原稿の誤字脱字と表記ゆれ(数字の全角半角、カタカナ語の統一など)をチェックしてほしい。修正候補を一覧で出してほしいが、文章の勝手な書き換えはしないでほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp62', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">63. 取材メモから記事の下書き作成</div><div class="imeta">職種: ライター・編集者 ｜ 場面: インタビュー取材の内容を記事化するとき</div><pre class="prompt" id="jp63">この取材メモをもとに、記事の下書きを作ってほしい。話した順番通りではなく、読者にとって分かりやすい順番に構成し直してほしい。発言はできるだけそのまま活かしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp63', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">64. 複数記事の文体統一</div><div class="imeta">職種: ライター・編集者 ｜ 場面: 複数のライターが書いた原稿をメディアとして統一感のある文体に揃えるとき</div><pre class="prompt" id="jp64">この2本の記事、書き手が違うので文体にばらつきがある。です・ます調に統一し、一人称の表記も揃えてほしい。内容や主張は変えないでほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp64', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">65. SEOタイトル・見出しのバリエーション作成</div><div class="imeta">職種: ライター・編集者 ｜ 場面: 記事タイトルを検討する段階</div><pre class="prompt" id="jp65">この記事内容にあうタイトル案を5つ考えてほしい。検索されそうなキーワードを含めつつ、誇張しすぎない表現にしてほしい。それぞれ狙いも一言添えてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp65', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">66. 校正チェックリストに沿った確認作業</div><div class="imeta">職種: ライター・編集者 ｜ 場面: 校正の抜け漏れを防ぎたいとき</div><pre class="prompt" id="jp66">うちの校正チェックリスト(事実確認・敬称の統一・数字の出典明記など)に沿って、この原稿を1項目ずつ確認してほしい。問題があった箇所は該当行を示してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp66', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">67. @webで一次情報を調べてファクトチェック</div><div class="imeta">職種: ライター・編集者 ｜ 場面: 記事内で使う数字や引用の裏取りをするとき</div><pre class="prompt" id="jp67">この原稿に書かれている統計データの出典を @web で確認してほしい。出典元が見つかった場合はリンクを、見つからない場合はその旨を明記してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp67', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">68. 記事の要約版・SNS用要約版の作成</div><div class="imeta">職種: ライター・編集者 ｜ 場面: 長文記事をSNS告知用に短くまとめるとき</div><pre class="prompt" id="jp68">この記事を140字程度のX投稿用要約と、3行程度のLINE配信用要約の2パターンに要約してほしい。記事を読みたくなるフックを最初の一文に入れてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp68', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">69. 用語集・スタイルガイドの管理</div><div class="imeta">職種: ライター・編集者 ｜ 場面: メディア全体で表記ルールを統一したいとき</div><pre class="prompt" id="jp69">今使っている用語集とスタイルガイドのメモを整理して、1つのドキュメントにまとめてほしい。新しく参加するライターに渡せる形式にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp69', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">70. 原稿のMarkdown⇔Word形式変換整理</div><div class="imeta">職種: ライター・編集者 ｜ 場面: 入稿先によってファイル形式が異なるとき</div><pre class="prompt" id="jp70">このMarkdown原稿を、見出しレベルを保ったままWordに貼り付けやすいプレーンテキスト形式に整えてほしい。強調や箇条書きの記号もWordで見やすい形に変換してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp70', this)">📋 コピー</button></div></div></div><div class="cat" id="jpc8"><h2>8. 事務・バックオフィス</h2></div><div class="icards"><div class="icard"><div class="ititle">71. 請求書データのCSV突合と集計</div><div class="imeta">職種: 事務・バックオフィス ｜ 場面: 月末に複数の請求書データを突き合わせるとき</div><pre class="prompt" id="jp71">この2つのCSV、取引先からの請求データと社内の支払予定データが一致しているか突き合わせてほしい。金額が一致しない取引先があれば一覧にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp71', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">72. 定型メールのテンプレート化</div><div class="imeta">職種: 事務・バックオフィス ｜ 場面: 同じ内容の問い合わせ返信を毎回一から書いているとき</div><pre class="prompt" id="jp72">これまで送った請求書送付の案内メールを何通か渡すので、共通する部分をテンプレート化してほしい。宛先名や金額など、案件ごとに変わる部分は分かりやすく空欄にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp72', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">73. 勤怠データの集計とチェック</div><div class="imeta">職種: 事務・バックオフィス ｜ 場面: 月末に勤怠データを集計して異常値を確認するとき</div><pre class="prompt" id="jp73">この勤怠CSVから、従業員ごとの残業時間を月次で集計してほしい。労働時間の上限に近い、または超えていそうな人がいれば一覧でハイライトしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp73', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">74. 各種申請書フォーマットの整備</div><div class="imeta">職種: 事務・バックオフィス ｜ 場面: 社内の申請書式がバラバラで統一したいとき</div><pre class="prompt" id="jp74">今バラバラに使われている経費申請書と休暇申請書のフォーマットを、統一したデザインのテンプレートに整えてほしい。必須項目に漏れがないか確認してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp74', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">75. ファイル整理・命名規則の一括適用</div><div class="imeta">職種: 事務・バックオフィス ｜ 場面: 共有フォルダ内のファイルが乱雑になっているとき</div><pre class="prompt" id="jp75">このフォルダ内のファイル、名前の付け方がバラバラで探しにくい。日付_案件名_種別の形式に統一してリネームしてほしい。リネーム前後の対応表も残してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp75', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">76. 議事録テンプレートへの自動流し込み</div><div class="imeta">職種: 事務・バックオフィス ｜ 場面: 会議の音声メモやメモ書きを正式な議事録に整えるとき</div><pre class="prompt" id="jp76">この会議メモを、社内で使っている議事録テンプレート(日時・参加者・議題・決定事項・宿題事項)の形式に整えてほしい。口語表現は書き言葉に直してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp76', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">77. 経費精算チェックリストの作成</div><div class="imeta">職種: 事務・バックオフィス ｜ 場面: 経費精算の申請内容を確認するとき</div><pre class="prompt" id="jp77">経費精算の申請を確認するときのチェックリストを作ってほしい。領収書の要件・上限金額・承認フローの観点を含めて、新人でも使えるレベルにかみ砕いてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp77', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">78. 社内問い合わせ対応のFAQドキュメント化</div><div class="imeta">職種: 事務・バックオフィス ｜ 場面: 同じ質問が繰り返し社内から来るとき</div><pre class="prompt" id="jp78">これまで社内から受けた総務関連の質問と回答をまとめたメモを渡すので、検索しやすいFAQドキュメントに整理してほしい。カテゴリ分けもしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp78', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">79. スプレッドシート関数の作成・デバッグ</div><div class="imeta">職種: 事務・バックオフィス ｜ 場面: 複雑な集計関数の作り方が分からないとき</div><pre class="prompt" id="jp79">このスプレッドシートで、部署ごとの経費合計を自動計算する関数を作りたい。どんな関数を使えばいいか教えてほしい。今入っている関数がエラーになっている原因も確認してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp79', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">80. 契約更新スケジュールの一覧化</div><div class="imeta">職種: 事務・バックオフィス ｜ 場面: 複数の契約書の更新時期を管理したいとき</div><pre class="prompt" id="jp80">これらの契約書ファイルから、契約期間と更新条件(自動更新かどうかなど)を抜き出して一覧表にしてほしい。更新の3ヶ月前に対応が必要なものが分かるようにしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp80', this)">📋 コピー</button></div></div></div><div class="cat" id="jpc9"><h2>9. カスタマーサポート</h2></div><div class="icards"><div class="icard"><div class="ititle">81. よくある質問への回答テンプレート作成</div><div class="imeta">職種: カスタマーサポート ｜ 場面: 頻出の問い合わせに毎回同じ内容を書いているとき</div><pre class="prompt" id="jp81">過去の対応履歴から、よく聞かれる質問トップ10を抽出してほしい。それぞれに対する標準回答文のテンプレートも作ってほしい。丁寧だが機械的すぎない文面にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp81', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">82. 問い合わせログの分類とタグ付け</div><div class="imeta">職種: カスタマーサポート ｜ 場面: 月次で問い合わせ傾向を分析するとき</div><pre class="prompt" id="jp82">この問い合わせログCSVを、内容ごとに(不具合報告・使い方相談・請求関連など)カテゴリ分類してほしい。カテゴリごとの件数も集計してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp82', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">83. マニュアルの更新と差分反映</div><div class="imeta">職種: カスタマーサポート ｜ 場面: 製品の仕様変更に合わせてサポートマニュアルを更新するとき</div><pre class="prompt" id="jp83">この製品仕様変更の内容をもとに、既存のサポートマニュアルで更新が必要な箇所を洗い出してほしい。変更前後の差分が分かる形で修正案を出してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp83', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">84. クレーム対応記録の要約作成</div><div class="imeta">職種: カスタマーサポート ｜ 場面: クレーム対応の内容を上長に報告するとき</div><pre class="prompt" id="jp84">この対応記録メモを、経緯・お客様の要望・対応内容・現在の状況の4項目に整理してほしい。上長への報告用に、感情的な表現は落ち着いた言い回しに調整してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp84', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">85. チャットボット向けFAQデータの整形</div><div class="imeta">職種: カスタマーサポート ｜ 場面: チャットボットに登録するFAQデータを準備するとき</div><pre class="prompt" id="jp85">このFAQ一覧を、チャットボットに登録しやすいように質問と回答のペア形式に整形してほしい。同じ内容を聞かれるパターン(言い回し違い)も想定して質問文のバリエーションを追加してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp85', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">86. 対応履歴からナレッジベース記事化</div><div class="imeta">職種: カスタマーサポート ｜ 場面: 個別対応した内容をチーム全体のナレッジにしたいとき</div><pre class="prompt" id="jp86">この個別の対応履歴を、他のサポートメンバーも参照できるナレッジベース記事の形式にまとめてほしい。同じ問い合わせが来たときにすぐ対応できるようにしたい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp86', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">87. 返信メールのトーン調整バリエーション</div><div class="imeta">職種: カスタマーサポート ｜ 場面: 相手の状況に合わせて返信のトーンを変えたいとき</div><pre class="prompt" id="jp87">このお詫びメールの下書きを、通常のお客様向けと、既に強い不満を示しているお客様向けの2パターンで用意してほしい。どちらも謝罪の姿勢は崩さず、後者はより丁寧なトーンにしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp87', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">88. サポート品質チェックリストの作成</div><div class="imeta">職種: カスタマーサポート ｜ 場面: 対応品質のばらつきを減らしたいとき</div><pre class="prompt" id="jp88">サポート対応の品質を確認するためのチェックリストを作ってほしい。返信スピード・言葉遣い・解決までの手順が明確かという観点を含めてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp88', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">89. 多言語対応FAQの下書き作成</div><div class="imeta">職種: カスタマーサポート ｜ 場面: 海外のお客様向けにFAQを用意するとき</div><pre class="prompt" id="jp89">この日本語のFAQを英語に翻訳してほしい。直訳ではなく、海外のお客様が読んでも自然に伝わる表現にしてほしい。専門用語には簡単な説明を添えてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp89', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">90. エスカレーション基準表の整備</div><div class="imeta">職種: カスタマーサポート ｜ 場面: どの問い合わせを上長にエスカレーションすべきか基準を明確にしたいとき</div><pre class="prompt" id="jp90">これまでエスカレーションした事例のメモをもとに、どんな条件のときに上長へ引き継ぐべきかの基準表を作ってほしい。新人サポートメンバーが判断に迷わない形にしてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp90', this)">📋 コピー</button></div></div></div><div class="cat" id="jpc10"><h2>10. 学生・学習者</h2></div><div class="icards"><div class="icard"><div class="ititle">91. レポートの構成案作成と参考文献整理</div><div class="imeta">職種: 学生・学習者 ｜ 場面: レポート課題に取り組み始めるとき</div><pre class="prompt" id="jp91">このテーマでレポートを書きたい。序論・本論・結論の構成案を作ってほしい。あわせて、参考にしたこのメモの出典情報を、参考文献リストの形式に整えてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp91', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">92. 講義ノートの要約とMarkdown化</div><div class="imeta">職種: 学生・学習者 ｜ 場面: 授業で取ったメモを試験前に見返しやすい形にしたいとき</div><pre class="prompt" id="jp92">この講義メモを、見出しと箇条書きを使ったMarkdown形式に整理してほしい。重要そうな用語には目立つように印を付けてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp92', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">93. 語学学習用の例文・単語帳作成</div><div class="imeta">職種: 学生・学習者 ｜ 場面: 英単語や表現を実際の使い方とセットで覚えたいとき</div><pre class="prompt" id="jp93">このリストにある英単語を使った例文を、日常会話で使えるレベルで1つずつ作ってほしい。単語・例文・日本語訳をセットにした単語帳の形式にまとめてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp93', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">94. プログラミング学習の演習問題解説</div><div class="imeta">職種: 学生・学習者 ｜ 場面: 演習問題でつまずいたコードの意味を理解したいとき</div><pre class="prompt" id="jp94">このコードがなぜエラーになるのか、初心者にも分かる言葉で説明してほしい。答えだけ直すのではなく、どう考えれば自分で直せるようになるかのヒントも教えてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp94', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">95. 就活用の自己PR・ESの下書き作成</div><div class="imeta">職種: 学生・学習者 ｜ 場面: エントリーシートの自己PR欄を書くとき</div><pre class="prompt" id="jp95">この経験のメモをもとに、自己PRの下書きを作ってほしい。エピソード・そこから学んだこと・入社後にどう活かすかの3段構成にしてほしい。誇張した表現は避けてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp95', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">96. 研究データの整理とグラフ化準備</div><div class="imeta">職種: 学生・学習者 ｜ 場面: 卒業研究や実験のデータをまとめるとき</div><pre class="prompt" id="jp96">この実験データのCSVを、グラフにしやすい形に整理してほしい。測定条件ごとに列を分けて、平均値の列も追加してほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp96', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">97. @webで論文・一次情報を調べてまとめる</div><div class="imeta">職種: 学生・学習者 ｜ 場面: レポートや研究のために先行研究を調べるとき</div><pre class="prompt" id="jp97">このテーマに関する信頼できる情報源を @web で調べてほしい。見つかった情報は出典付きで、要点を箇条書きにまとめてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp97', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">98. 卒論・レポートの誤字脱字チェック</div><div class="imeta">職種: 学生・学習者 ｜ 場面: 提出前の最終確認をするとき</div><pre class="prompt" id="jp98">この卒論原稿の誤字脱字と、数字や図表番号の整合性をチェックしてほしい。修正が必要そうな箇所を一覧にして教えてほしい。文章の内容自体は変えないでほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp98', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">99. 学習計画表・スケジュール管理シート作成</div><div class="imeta">職種: 学生・学習者 ｜ 場面: 試験や資格取得に向けて計画を立てるとき</div><pre class="prompt" id="jp99">試験日までの残り期間と、これから勉強する範囲のメモを渡すので、週単位の学習計画表を作ってほしい。無理のないペース配分と、復習の時間も組み込んでほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp99', this)">📋 コピー</button></div></div><div class="icard"><div class="ititle">100. 資格試験の暗記カード(Q&amp;A形式)自動生成</div><div class="imeta">職種: 学生・学習者 ｜ 場面: 暗記が必要な範囲を効率よく反復学習したいとき</div><pre class="prompt" id="jp100">このテキストの範囲から、資格試験対策用の一問一答形式の暗記カードを作ってほしい。問題と答えをセットにして、間違えやすそうなポイントには補足説明も添えてほしい。</pre><div class="btns"><button class="btn" onclick="copyPrompt('jp100', this)">📋 コピー</button></div></div></div><pre id="jpfull" style="display:none;"># 🎁 職種別Cursor活用術100選
+
+エンジニアだけでなく、あらゆる職種でCursorを活かす方法を職種別に100個まとめました。自分の職種の章から探すか、キーワードで検索して使ってください。
+
+**受け取り方**: 気になる活用術のプロンプトをコピーして、Cursorで試してください。
+
+## 1. エンジニア(Web/アプリ)
+
+### 1. Plan modeで実装前の設計レビュー
+職種: エンジニア(Web/アプリ) ｜ 場面: 新機能の実装に着手する前に、影響範囲と手順を先にすり合わせたいとき
+```text
+新しいユーザー通知機能を追加したい。Plan modeで、既存のコード構成を踏まえた実装手順と変更が必要なファイル一覧を先に出してほしい。まだコードは書かず、手順に問題がないか確認してから実装に進みたい。
+```
+
+### 2. Agentでバグ修正からテスト追加まで一括依頼
+職種: エンジニア(Web/アプリ) ｜ 場面: 再現手順のあるバグ報告を受けて修正するとき
+```text
+このバグレポートの再現手順に沿って原因を特定し、修正してほしい。修正後は同じ不具合が再発しないように、該当箇所のテストも追加してほしい。修正した理由も簡単にコメントで残してほしい。
+```
+
+### 3. @docsで社内API仕様書を参照させながら実装
+職種: エンジニア(Web/アプリ) ｜ 場面: 社内の独自APIを呼び出す機能を実装するとき
+```text
+@docs で登録している社内API仕様書を参照しながら、注文ステータス更新エンドポイントを呼び出す処理を実装してほしい。仕様書に書かれているエラーコードの扱いも漏れなく反映してほしい。
+```
+
+### 4. MCPでGitHub Issueを取得して着手
+職種: エンジニア(Web/アプリ) ｜ 場面: Issueの内容確認とコーディングを行き来せず一気に進めたいとき
+```text
+GitHub連携のMCPで担当中のIssue一覧を取得して、優先度が高いものから内容を教えてほしい。内容を確認したら、そのまま該当Issueの実装に着手してほしい。
+```
+
+### 5. Cloud Agentにリファクタリングをバックグラウンドで依頼
+職種: エンジニア(Web/アプリ) ｜ 場面: 手元の作業を止めずに大規模なコード整理を進めたいとき
+```text
+utilsフォルダ内の重複しているバリデーション処理を1つの共通関数にまとめるリファクタリングを、Cloud Agentでバックグラウンド実行してほしい。完了したら差分をまとめて教えてほしい。
+```
+
+### 6. @webで最新のライブラリ仕様変更を調べさせる
+職種: エンジニア(Web/アプリ) ｜ 場面: 依存ライブラリをアップデートする前に破壊的変更を確認したいとき
+```text
+使用しているライブラリを最新版に上げたい。@web でこのライブラリの直近のメジャーアップデート内容を調べて、今のコードに影響する破壊的変更がないか確認してほしい。あれば対応方針も提案してほしい。
+```
+
+### 7. コーディング規約をSkillsに登録して一貫性を保つ
+職種: エンジニア(Web/アプリ) ｜ 場面: チームメンバーによって実装スタイルがばらつくとき
+```text
+このプロジェクトの命名規則・ディレクトリ構成・エラーハンドリングの書き方をまとめてSkillとして登録したい。今後の実装依頼では、このSkillの内容に沿ったコードを提案してほしい。
+```
+
+### 8. コミット前のセルフレビューを依頼
+職種: エンジニア(Web/アプリ) ｜ 場面: プルリクエストを出す前に自分の変更を客観的に見直したいとき
+```text
+今回の変更差分を、レビュアーの視点でセルフレビューしてほしい。可読性・命名・エッジケースの考慮漏れがないか指摘してほしい。指摘だけでよく、勝手に修正はしないでほしい。
+```
+
+### 9. マイグレーションスクリプトとロールバック手順の作成
+職種: エンジニア(Web/アプリ) ｜ 場面: データベースのスキーマ変更を安全に進めたいとき
+```text
+usersテーブルにemail_verified_atカラムを追加するマイグレーションを作成してほしい。あわせて、問題が起きたときに戻せるロールバック用のスクリプトと、実行手順のメモも用意してほしい。
+```
+
+### 10. 障害調査でログとコードを横断的に確認
+職種: エンジニア(Web/アプリ) ｜ 場面: 本番環境で発生したエラーの原因を特定するとき
+```text
+このエラーログを渡すので、関連するコードを横断的に確認して、発生しうる原因の候補を挙げてほしい。可能性が高い順に並べて、それぞれの確認方法も教えてほしい。
+```
+
+## 2. データアナリスト・データサイエンティスト
+
+### 11. CSVの列名統一とデータクレンジング
+職種: データアナリスト・データサイエンティスト ｜ 場面: 複数部署から集まったCSVの表記ゆれを整えるとき
+```text
+この3つのCSVファイル、部署ごとに列名や日付の書式がバラバラになっている。列名を統一し、日付をYYYY-MM-DD形式に揃えて、1つのファイルにまとめてほしい。処理内容は簡単なメモとして残してほしい。
+```
+
+### 12. 分析用スクリプトを自然言語で組み立てる
+職種: データアナリスト・データサイエンティスト ｜ 場面: 集計ロジックを自分でコーディングせずに実現したいとき
+```text
+このCSVから、月別・商品カテゴリ別の売上合計と前月比を出すスクリプトを作ってほしい。専門的なコードの中身は分からなくてもいいので、実行結果がすぐ確認できるようにしてほしい。
+```
+
+### 13. 複数Excelの統合とマスタ作成
+職種: データアナリスト・データサイエンティスト ｜ 場面: 支店ごとのExcelを1つの分析用マスタにまとめるとき
+```text
+このフォルダにある支店別の顧客リストExcelを、1つのマスタファイルに統合してほしい。支店名の列を追加し、重複している顧客はIDで名寄せしてほしい。
+```
+
+### 14. 異常値検出ロジックの相談と実装
+職種: データアナリスト・データサイエンティスト ｜ 場面: 分析対象データに含まれる外れ値を機械的に見つけたいとき
+```text
+この売上データの中で、明らかに入力ミスと思われる異常値を検出したい。どんな基準で判定するのが妥当か提案したうえで、検出結果をハイライトしたファイルを作ってほしい。
+```
+
+### 15. 分析結果をレポート形式のMarkdownにまとめる
+職種: データアナリスト・データサイエンティスト ｜ 場面: 分析結果を上司や他部署に共有するとき
+```text
+先ほどの分析結果を、背景・分析方法・結果・示唆の4段落構成でMarkdownレポートにまとめてほしい。専門用語には簡単な補足を添えて、非エンジニアの上司にも伝わる書き方にしてほしい。
+```
+
+### 16. SQLクエリの生成とパフォーマンス改善
+職種: データアナリスト・データサイエンティスト ｜ 場面: 複雑な集計をSQLで書きたいが自信がないとき
+```text
+注文テーブルと顧客テーブルを結合して、顧客ごとの累計購入額と最終購入日を出すSQLを書いてほしい。実行に時間がかかりそうな箇所があれば、インデックスの提案も含めて教えてほしい。
+```
+
+### 17. @webで最新の統計手法を調べてから分析設計
+職種: データアナリスト・データサイエンティスト ｜ 場面: 使ったことのない分析手法を検討するとき
+```text
+このユーザー離脱データに使えそうな分析手法を @web で調べてほしい。いくつか候補を比較して、今回のデータ量と目的に合う手法を1つ提案してほしい。
+```
+
+### 18. ダッシュボード用の集計スクリプトを自動生成
+職種: データアナリスト・データサイエンティスト ｜ 場面: 毎週手作業で行っている集計を仕組み化したいとき
+```text
+毎週手作業でやっているKPI集計を自動化したい。元データのCSVを渡すので、同じ形式で更新すれば毎回同じ集計結果が出力されるスクリプトを作ってほしい。
+```
+
+### 19. Plan modeで分析手順を先に確認してから実行
+職種: データアナリスト・データサイエンティスト ｜ 場面: 分析の方向性を間違えないよう事前にすり合わせたいとき
+```text
+このデータから解約要因を分析したい。Plan modeで、どういう手順で進めるつもりか先に説明してほしい。手順に納得できたら実行を依頼する。
+```
+
+### 20. 週次レポートのテンプレート化と自動更新
+職種: データアナリスト・データサイエンティスト ｜ 場面: 毎週同じ形式のレポートを作り続けているとき
+```text
+毎週提出しているレポートのフォーマットをテンプレート化したい。今週分のデータを渡すので、このテンプレートに沿って数値と簡単なコメントを埋めたレポートを作ってほしい。
+```
+
+## 3. マーケター
+
+### 21. LP文言のA/Bパターン生成
+職種: マーケター ｜ 場面: ランディングページのキャッチコピーを複数案検討したいとき
+```text
+この商品のLPに使うキャッチコピーを5パターン考えてほしい。ターゲットは30代の子育て世代で、価格の安さより時短効果を訴求したい。誇張表現は避けて、具体的な数字を入れてほしい。
+```
+
+### 22. 競合サイトの調査と比較表作成
+職種: マーケター ｜ 場面: 競合の料金プランやサービス内容を横並びで比較したいとき
+```text
+この3社の競合サイトを調べて、料金プラン・主要機能・ターゲット層を比較表にまとめてほしい。自社との違いが一目で分かるように整理してほしい。
+```
+
+### 23. SNS投稿文を媒体別トーンで一括生成
+職種: マーケター ｜ 場面: 同じ告知を複数のSNSに投稿する準備をするとき
+```text
+このキャンペーン告知文をもとに、X用・Instagram用・LINE公式アカウント用の投稿文をそれぞれ作ってほしい。媒体ごとの文字数と読者のトーンの違いを意識して書き分けてほしい。
+```
+
+### 24. キーワードリストからSEO記事構成案を作る
+職種: マーケター ｜ 場面: 新しいオウンドメディア記事の企画を立てるとき
+```text
+このキーワードリストをもとに、検索意図別に記事テーマを分類してほしい。優先度が高そうなテーマを3つ選び、それぞれ見出し構成案を作ってほしい。
+```
+
+### 25. 広告文のコピーバリエーション量産
+職種: マーケター ｜ 場面: 広告配信で複数パターンのテストをしたいとき
+```text
+このリスティング広告の見出しを、訴求軸を変えて10パターン作ってほしい。価格訴求・機能訴求・悩み解決訴求の3タイプに分けて、それぞれ文字数制限内で収めてほしい。
+```
+
+### 26. アクセス解析データの傾向要約
+職種: マーケター ｜ 場面: アクセス解析ツールから出力したCSVの傾向を素早く把握したいとき
+```text
+このアクセス解析のCSVを見て、先月と比べて流入が増減しているページと、その要因として考えられることを教えてほしい。専門用語は使わず、施策の判断材料になる形でまとめてほしい。
+```
+
+### 27. @webでトレンドを調べてコンテンツカレンダー作成
+職種: マーケター ｜ 場面: 来月分のコンテンツ企画を立てるとき
+```text
+@web で今このジャンルで話題になっているトピックを調べてほしい。それをもとに、来月分のブログ・SNS投稿のコンテンツカレンダー案を作ってほしい。
+```
+
+### 28. メールマガジンの下書き作成とパーソナライズ
+職種: マーケター ｜ 場面: 定期配信するメルマガの本文を用意するとき
+```text
+今月の新機能リリースを伝えるメルマガの下書きを作ってほしい。既存顧客向けと休眠顧客向けで、書き出しの一文だけ変えたパターンをそれぞれ用意してほしい。
+```
+
+### 29. ペルソナ設計シートの作成
+職種: マーケター ｜ 場面: 新商品のターゲット像を社内で共有するとき
+```text
+この商品のアンケート回答データをもとに、代表的な顧客像を2〜3パターンのペルソナシートにまとめてほしい。年齢・悩み・購買のきっかけを具体的に書いてほしい。
+```
+
+### 30. キャンペーン結果レポートの自動整形
+職種: マーケター ｜ 場面: 広告運用結果を社内報告用にまとめるとき
+```text
+この広告運用の実績CSVを、社内報告用のレポート形式に整形してほしい。目標に対する達成率と、次回への改善案も1〜2点添えてほしい。
+```
+
+## 4. 営業
+
+### 31. 商談メモから提案書のたたき台作成
+職種: 営業 ｜ 場面: 商談直後にメモをもとに提案資料を作るとき
+```text
+今日の商談メモを渡すので、先方の課題・自社サービスでの解決策・想定効果の3構成で提案書のたたき台を作ってほしい。専門用語は避けて、先方の担当者にそのまま見せられる文章にしてほしい。
+```
+
+### 32. 顧客リストのCSV整形と優先度付け
+職種: 営業 ｜ 場面: 展示会で集めた名刺リストを架電優先順に整理するとき
+```text
+このExcelの顧客リスト、会社名や部署名の表記がバラバラなので統一してほしい。そのうえで、業種と従業員規模をもとに架電の優先順位を付けてほしい。
+```
+
+### 33. 商談前の企業リサーチを一括実施
+職種: 営業 ｜ 場面: 初回商談の前に相手企業について事前調査するとき
+```text
+明日商談予定のこの会社について、事業内容・最近のニュース・想定される課題を調べてほしい。商談の冒頭で使える話のきっかけも2〜3個提案してほしい。
+```
+
+### 34. トークスクリプトの想定問答集作成
+職種: 営業 ｜ 場面: 新商品の提案で聞かれそうな質問に備えるとき
+```text
+この新商品を提案する際に、顧客から聞かれそうな質問と回答例を想定問答集としてまとめてほしい。価格・導入期間・既存システムとの連携についての質問は特に厚めに用意してほしい。
+```
+
+### 35. 見積書テンプレートへのデータ流し込み
+職種: 営業 ｜ 場面: 案件ごとに見積書を毎回手作業で作っているとき
+```text
+この見積書テンプレートに、案件情報のCSVを流し込んで案件ごとの見積書を一括作成してほしい。金額の桁区切りと消費税計算は必ずチェックしてほしい。
+```
+
+### 36. 商談議事録の要約とネクストアクション抽出
+職種: 営業 ｜ 場面: 長時間の商談メモから要点だけ拾いたいとき
+```text
+この商談の文字起こしメモを、決定事項・保留事項・次回までのネクストアクションの3つに分けて要約してほしい。誰が何をいつまでにやるかが分かる形にしてほしい。
+```
+
+### 37. メール返信文のドラフト作成
+職種: 営業 ｜ 場面: 見積もり後の値引き交渉メールへの返信を考えるとき
+```text
+この顧客からの値引き依頼メールに対する返信文を考えてほしい。値引きはできないが代わりにサポート期間を延長する提案をしたい。丁寧だが機械的にならない文面にしてほしい。
+```
+
+### 38. 失注理由の分類とタグ付け
+職種: 営業 ｜ 場面: 四半期の失注案件を振り返るとき
+```text
+このExcelにある失注案件の備考欄をもとに、失注理由をいくつかのカテゴリに分類してタグ付けしてほしい。カテゴリごとの件数も集計してほしい。
+```
+
+### 39. 提案資料の業界別カスタマイズ
+職種: 営業 ｜ 場面: 同じ商品を異なる業界の顧客に提案するとき
+```text
+このベースの提案資料を、製造業向けと小売業向けにそれぞれカスタマイズしてほしい。事例部分と課題の切り口を業界に合わせて変えてほしい。
+```
+
+### 40. 顧客からのFAQ対応集の作成
+職種: 営業 ｜ 場面: よく聞かれる質問への回答を毎回考え直しているとき
+```text
+これまでの商談で顧客からよく聞かれた質問をまとめたメモを渡すので、それをFAQ集として整理してほしい。営業チーム内で共有できる形式にしてほしい。
+```
+
+## 5. 経営者・個人事業主
+
+### 41. 事業計画書のたたき台作成
+職種: 経営者・個人事業主 ｜ 場面: 融資や補助金申請のために事業計画書を用意するとき
+```text
+この事業の概要メモをもとに、事業計画書のたたき台を作ってほしい。事業内容・市場環境・収支計画・今後の展望の構成で、金融機関の担当者が読んでも分かる文章にしてほしい。
+```
+
+### 42. 経費データの分類と月次サマリー作成
+職種: 経営者・個人事業主 ｜ 場面: 月末に経費を整理して顧問税理士に渡す前に確認するとき
+```text
+この月の経費明細CSVを、勘定科目ごとに分類してほしい。分類に迷いそうな項目はコメントを付けて、税理士に確認すべき点として一覧にしてほしい。
+```
+
+### 43. 契約書のチェックポイント洗い出し
+職種: 経営者・個人事業主 ｜ 場面: 取引先から届いた契約書を確認するとき（最終判断は専門家に確認する前提）
+```text
+この契約書案を読んで、一般的に確認しておいた方がよさそうな条項(支払条件・解約条項・損害賠償の範囲など)を洗い出してほしい。法的な最終判断は弁護士に確認するので、あくまで確認観点の整理をお願いしたい。
+```
+
+### 44. 採用要項・求人票の作成
+職種: 経営者・個人事業主 ｜ 場面: 新しいメンバーを募集するとき
+```text
+このポジションのざっくりした要件メモをもとに、求人媒体に掲載する求人票を作ってほしい。仕事内容・求めるスキル・働き方の3項目に整理し、応募したくなる書き出しにしてほしい。
+```
+
+### 45. 競合分析と市場調査の一括実施
+職種: 経営者・個人事業主 ｜ 場面: 新規事業の検討段階で市場感を把握したいとき
+```text
+このジャンルの市場規模と主要な競合について調べてほしい。競合の強み・弱みと、自分の事業がどこで差別化できそうかも合わせて整理してほしい。
+```
+
+### 46. 議事録から意思決定事項の抽出
+職種: 経営者・個人事業主 ｜ 場面: 経営会議の内容を後で振り返れる形にしておきたいとき
+```text
+この経営会議の議事メモから、決まったことと保留になったことを分けて整理してほしい。決定事項には担当者と期限も明記してほしい。
+```
+
+### 47. 資金繰り表のスプレッドシート作成
+職種: 経営者・個人事業主 ｜ 場面: 今後数ヶ月の資金繰りを見通したいとき
+```text
+今の売上と経費の実績データをもとに、今後6ヶ月分の資金繰り表を作ってほしい。月ごとの入出金と残高が一目で分かる形式にしてほしい。
+```
+
+### 48. 社内規程・マニュアルの下書き作成
+職種: 経営者・個人事業主 ｜ 場面: 従業員が増えてルールを明文化する必要が出てきたとき
+```text
+今は口頭で伝えている経費精算のルールを、社内マニュアルとして文書化したい。箇条書きで分かりやすく、新しく入った人でも読めば理解できる書き方にしてほしい。
+```
+
+### 49. ピッチ資料の構成案作成
+職種: 経営者・個人事業主 ｜ 場面: 投資家や取引先向けのピッチ資料を準備するとき
+```text
+この事業の説明メモをもとに、5分で話せるピッチ資料の構成案を作ってほしい。課題・解決策・市場規模・実績・今後の計画のスライド構成で、各スライドに入れる要点も書いてほしい。
+```
+
+### 50. カレンダーとタスクの連携管理
+職種: 経営者・個人事業主 ｜ 場面: 複数の予定とタスクを一元管理したいとき
+```text
+連携しているカレンダーとタスク管理ツールから、今週の予定と未完了タスクを取得してほしい。優先度が高そうな順に並べ替えて、1日の中でどう配分すればよいか提案してほしい。
+```
+
+## 6. デザイナー
+
+### 51. デザインシステムのトークン定義ファイル管理
+職種: デザイナー ｜ 場面: 色やフォントサイズなどのデザイン変数を整理したいとき
+```text
+現在バラバラに管理している色・余白・フォントサイズの値を、1つのデザイントークンファイルにまとめてほしい。命名規則は分かりやすく統一してほしい。
+```
+
+### 52. デザイン仕様からHTML/CSS実装への橋渡し
+職種: デザイナー ｜ 場面: デザインの意図をエンジニアに正確に伝えたいとき
+```text
+このデザインの余白・色・フォントの指定を、実装側が迷わないように仕様書としてまとめてほしい。数値は具体的なピクセル値やカラーコードで書いてほしい。
+```
+
+### 53. デザインレビュー用チェックリスト作成
+職種: デザイナー ｜ 場面: 複数人でデザインレビューを行う前の準備をするとき
+```text
+このプロジェクトのデザインレビューで確認すべき項目を、チェックリスト形式で作ってほしい。視認性・余白の一貫性・アクセシビリティの観点を必ず含めてほしい。
+```
+
+### 54. カラーパレット・タイポグラフィのドキュメント化
+職種: デザイナー ｜ 場面: ブランドガイドラインを整備するとき
+```text
+今使っているカラーパレットとフォント一覧を、他のメンバーが参照できるドキュメントにまとめてほしい。それぞれどんな場面で使うかの説明も添えてほしい。
+```
+
+### 55. アセット命名規則の統一とリネーム作業
+職種: デザイナー ｜ 場面: 大量の画像ファイルの命名がバラバラになっているとき
+```text
+このフォルダ内の画像ファイル名がバラバラなので、統一した命名規則でリネームしてほしい。用途・サイズ・バージョンが分かる形式にしてほしい。
+```
+
+### 56. デザイン変更履歴のMarkdownまとめ
+職種: デザイナー ｜ 場面: デザインの変更経緯を後から追えるようにしておきたいとき
+```text
+今回のリニューアルで変更した箇所を、変更前・変更後・変更理由の形式でMarkdownにまとめてほしい。後からチームで振り返るときに使いたい。
+```
+
+### 57. 最新UIトレンドを調べてムードボード構成案作成
+職種: デザイナー ｜ 場面: 新しいデザインの方向性を検討し始めるとき
+```text
+@web でこのジャンルのサービスの最近のUIデザイン傾向を調べてほしい。参考になりそうな要素をいくつかピックアップして、ムードボードの構成案として整理してほしい。
+```
+
+### 58. クライアント向け提案資料の構成作成
+職種: デザイナー ｜ 場面: デザイン提案をクライアントにプレゼンする準備をするとき
+```text
+このデザイン案をクライアントに説明するプレゼン資料の構成を作ってほしい。デザインの意図と、依頼内容にどう応えているかが伝わる流れにしてほしい。
+```
+
+### 59. アクセシビリティチェック項目の洗い出し
+職種: デザイナー ｜ 場面: デザインが幅広いユーザーに配慮できているか確認したいとき
+```text
+このデザインについて、色のコントラストや文字サイズなど、アクセシビリティの観点で確認すべき項目を洗い出してほしい。問題がありそうな箇所があれば具体的に指摘してほしい。
+```
+
+### 60. コンポーネント仕様書の自動生成
+職種: デザイナー ｜ 場面: デザインしたUIコンポーネントの仕様をドキュメント化するとき
+```text
+このボタンコンポーネントについて、サイズ違い・状態違い(通常・ホバー・無効)ごとの仕様を一覧表にまとめてほしい。実装担当者がそのまま参照できる形式にしてほしい。
+```
+
+## 7. ライター・編集者
+
+### 61. 記事構成案の作成とアウトライン整理
+職種: ライター・編集者 ｜ 場面: 執筆前に記事全体の構成を固めたいとき
+```text
+このテーマで記事を書きたい。想定読者は初心者で、読了後に「何をすればいいか分かる」状態にしたい。見出し構成案を3パターン作ってほしい。
+```
+
+### 62. 誤字脱字・表記ゆれの一括チェック
+職種: ライター・編集者 ｜ 場面: 入稿前に原稿を最終確認するとき
+```text
+この原稿の誤字脱字と表記ゆれ(数字の全角半角、カタカナ語の統一など)をチェックしてほしい。修正候補を一覧で出してほしいが、文章の勝手な書き換えはしないでほしい。
+```
+
+### 63. 取材メモから記事の下書き作成
+職種: ライター・編集者 ｜ 場面: インタビュー取材の内容を記事化するとき
+```text
+この取材メモをもとに、記事の下書きを作ってほしい。話した順番通りではなく、読者にとって分かりやすい順番に構成し直してほしい。発言はできるだけそのまま活かしてほしい。
+```
+
+### 64. 複数記事の文体統一
+職種: ライター・編集者 ｜ 場面: 複数のライターが書いた原稿をメディアとして統一感のある文体に揃えるとき
+```text
+この2本の記事、書き手が違うので文体にばらつきがある。です・ます調に統一し、一人称の表記も揃えてほしい。内容や主張は変えないでほしい。
+```
+
+### 65. SEOタイトル・見出しのバリエーション作成
+職種: ライター・編集者 ｜ 場面: 記事タイトルを検討する段階
+```text
+この記事内容にあうタイトル案を5つ考えてほしい。検索されそうなキーワードを含めつつ、誇張しすぎない表現にしてほしい。それぞれ狙いも一言添えてほしい。
+```
+
+### 66. 校正チェックリストに沿った確認作業
+職種: ライター・編集者 ｜ 場面: 校正の抜け漏れを防ぎたいとき
+```text
+うちの校正チェックリスト(事実確認・敬称の統一・数字の出典明記など)に沿って、この原稿を1項目ずつ確認してほしい。問題があった箇所は該当行を示してほしい。
+```
+
+### 67. @webで一次情報を調べてファクトチェック
+職種: ライター・編集者 ｜ 場面: 記事内で使う数字や引用の裏取りをするとき
+```text
+この原稿に書かれている統計データの出典を @web で確認してほしい。出典元が見つかった場合はリンクを、見つからない場合はその旨を明記してほしい。
+```
+
+### 68. 記事の要約版・SNS用要約版の作成
+職種: ライター・編集者 ｜ 場面: 長文記事をSNS告知用に短くまとめるとき
+```text
+この記事を140字程度のX投稿用要約と、3行程度のLINE配信用要約の2パターンに要約してほしい。記事を読みたくなるフックを最初の一文に入れてほしい。
+```
+
+### 69. 用語集・スタイルガイドの管理
+職種: ライター・編集者 ｜ 場面: メディア全体で表記ルールを統一したいとき
+```text
+今使っている用語集とスタイルガイドのメモを整理して、1つのドキュメントにまとめてほしい。新しく参加するライターに渡せる形式にしてほしい。
+```
+
+### 70. 原稿のMarkdown⇔Word形式変換整理
+職種: ライター・編集者 ｜ 場面: 入稿先によってファイル形式が異なるとき
+```text
+このMarkdown原稿を、見出しレベルを保ったままWordに貼り付けやすいプレーンテキスト形式に整えてほしい。強調や箇条書きの記号もWordで見やすい形に変換してほしい。
+```
+
+## 8. 事務・バックオフィス
+
+### 71. 請求書データのCSV突合と集計
+職種: 事務・バックオフィス ｜ 場面: 月末に複数の請求書データを突き合わせるとき
+```text
+この2つのCSV、取引先からの請求データと社内の支払予定データが一致しているか突き合わせてほしい。金額が一致しない取引先があれば一覧にしてほしい。
+```
+
+### 72. 定型メールのテンプレート化
+職種: 事務・バックオフィス ｜ 場面: 同じ内容の問い合わせ返信を毎回一から書いているとき
+```text
+これまで送った請求書送付の案内メールを何通か渡すので、共通する部分をテンプレート化してほしい。宛先名や金額など、案件ごとに変わる部分は分かりやすく空欄にしてほしい。
+```
+
+### 73. 勤怠データの集計とチェック
+職種: 事務・バックオフィス ｜ 場面: 月末に勤怠データを集計して異常値を確認するとき
+```text
+この勤怠CSVから、従業員ごとの残業時間を月次で集計してほしい。労働時間の上限に近い、または超えていそうな人がいれば一覧でハイライトしてほしい。
+```
+
+### 74. 各種申請書フォーマットの整備
+職種: 事務・バックオフィス ｜ 場面: 社内の申請書式がバラバラで統一したいとき
+```text
+今バラバラに使われている経費申請書と休暇申請書のフォーマットを、統一したデザインのテンプレートに整えてほしい。必須項目に漏れがないか確認してほしい。
+```
+
+### 75. ファイル整理・命名規則の一括適用
+職種: 事務・バックオフィス ｜ 場面: 共有フォルダ内のファイルが乱雑になっているとき
+```text
+このフォルダ内のファイル、名前の付け方がバラバラで探しにくい。日付_案件名_種別の形式に統一してリネームしてほしい。リネーム前後の対応表も残してほしい。
+```
+
+### 76. 議事録テンプレートへの自動流し込み
+職種: 事務・バックオフィス ｜ 場面: 会議の音声メモやメモ書きを正式な議事録に整えるとき
+```text
+この会議メモを、社内で使っている議事録テンプレート(日時・参加者・議題・決定事項・宿題事項)の形式に整えてほしい。口語表現は書き言葉に直してほしい。
+```
+
+### 77. 経費精算チェックリストの作成
+職種: 事務・バックオフィス ｜ 場面: 経費精算の申請内容を確認するとき
+```text
+経費精算の申請を確認するときのチェックリストを作ってほしい。領収書の要件・上限金額・承認フローの観点を含めて、新人でも使えるレベルにかみ砕いてほしい。
+```
+
+### 78. 社内問い合わせ対応のFAQドキュメント化
+職種: 事務・バックオフィス ｜ 場面: 同じ質問が繰り返し社内から来るとき
+```text
+これまで社内から受けた総務関連の質問と回答をまとめたメモを渡すので、検索しやすいFAQドキュメントに整理してほしい。カテゴリ分けもしてほしい。
+```
+
+### 79. スプレッドシート関数の作成・デバッグ
+職種: 事務・バックオフィス ｜ 場面: 複雑な集計関数の作り方が分からないとき
+```text
+このスプレッドシートで、部署ごとの経費合計を自動計算する関数を作りたい。どんな関数を使えばいいか教えてほしい。今入っている関数がエラーになっている原因も確認してほしい。
+```
+
+### 80. 契約更新スケジュールの一覧化
+職種: 事務・バックオフィス ｜ 場面: 複数の契約書の更新時期を管理したいとき
+```text
+これらの契約書ファイルから、契約期間と更新条件(自動更新かどうかなど)を抜き出して一覧表にしてほしい。更新の3ヶ月前に対応が必要なものが分かるようにしてほしい。
+```
+
+## 9. カスタマーサポート
+
+### 81. よくある質問への回答テンプレート作成
+職種: カスタマーサポート ｜ 場面: 頻出の問い合わせに毎回同じ内容を書いているとき
+```text
+過去の対応履歴から、よく聞かれる質問トップ10を抽出してほしい。それぞれに対する標準回答文のテンプレートも作ってほしい。丁寧だが機械的すぎない文面にしてほしい。
+```
+
+### 82. 問い合わせログの分類とタグ付け
+職種: カスタマーサポート ｜ 場面: 月次で問い合わせ傾向を分析するとき
+```text
+この問い合わせログCSVを、内容ごとに(不具合報告・使い方相談・請求関連など)カテゴリ分類してほしい。カテゴリごとの件数も集計してほしい。
+```
+
+### 83. マニュアルの更新と差分反映
+職種: カスタマーサポート ｜ 場面: 製品の仕様変更に合わせてサポートマニュアルを更新するとき
+```text
+この製品仕様変更の内容をもとに、既存のサポートマニュアルで更新が必要な箇所を洗い出してほしい。変更前後の差分が分かる形で修正案を出してほしい。
+```
+
+### 84. クレーム対応記録の要約作成
+職種: カスタマーサポート ｜ 場面: クレーム対応の内容を上長に報告するとき
+```text
+この対応記録メモを、経緯・お客様の要望・対応内容・現在の状況の4項目に整理してほしい。上長への報告用に、感情的な表現は落ち着いた言い回しに調整してほしい。
+```
+
+### 85. チャットボット向けFAQデータの整形
+職種: カスタマーサポート ｜ 場面: チャットボットに登録するFAQデータを準備するとき
+```text
+このFAQ一覧を、チャットボットに登録しやすいように質問と回答のペア形式に整形してほしい。同じ内容を聞かれるパターン(言い回し違い)も想定して質問文のバリエーションを追加してほしい。
+```
+
+### 86. 対応履歴からナレッジベース記事化
+職種: カスタマーサポート ｜ 場面: 個別対応した内容をチーム全体のナレッジにしたいとき
+```text
+この個別の対応履歴を、他のサポートメンバーも参照できるナレッジベース記事の形式にまとめてほしい。同じ問い合わせが来たときにすぐ対応できるようにしたい。
+```
+
+### 87. 返信メールのトーン調整バリエーション
+職種: カスタマーサポート ｜ 場面: 相手の状況に合わせて返信のトーンを変えたいとき
+```text
+このお詫びメールの下書きを、通常のお客様向けと、既に強い不満を示しているお客様向けの2パターンで用意してほしい。どちらも謝罪の姿勢は崩さず、後者はより丁寧なトーンにしてほしい。
+```
+
+### 88. サポート品質チェックリストの作成
+職種: カスタマーサポート ｜ 場面: 対応品質のばらつきを減らしたいとき
+```text
+サポート対応の品質を確認するためのチェックリストを作ってほしい。返信スピード・言葉遣い・解決までの手順が明確かという観点を含めてほしい。
+```
+
+### 89. 多言語対応FAQの下書き作成
+職種: カスタマーサポート ｜ 場面: 海外のお客様向けにFAQを用意するとき
+```text
+この日本語のFAQを英語に翻訳してほしい。直訳ではなく、海外のお客様が読んでも自然に伝わる表現にしてほしい。専門用語には簡単な説明を添えてほしい。
+```
+
+### 90. エスカレーション基準表の整備
+職種: カスタマーサポート ｜ 場面: どの問い合わせを上長にエスカレーションすべきか基準を明確にしたいとき
+```text
+これまでエスカレーションした事例のメモをもとに、どんな条件のときに上長へ引き継ぐべきかの基準表を作ってほしい。新人サポートメンバーが判断に迷わない形にしてほしい。
+```
+
+## 10. 学生・学習者
+
+### 91. レポートの構成案作成と参考文献整理
+職種: 学生・学習者 ｜ 場面: レポート課題に取り組み始めるとき
+```text
+このテーマでレポートを書きたい。序論・本論・結論の構成案を作ってほしい。あわせて、参考にしたこのメモの出典情報を、参考文献リストの形式に整えてほしい。
+```
+
+### 92. 講義ノートの要約とMarkdown化
+職種: 学生・学習者 ｜ 場面: 授業で取ったメモを試験前に見返しやすい形にしたいとき
+```text
+この講義メモを、見出しと箇条書きを使ったMarkdown形式に整理してほしい。重要そうな用語には目立つように印を付けてほしい。
+```
+
+### 93. 語学学習用の例文・単語帳作成
+職種: 学生・学習者 ｜ 場面: 英単語や表現を実際の使い方とセットで覚えたいとき
+```text
+このリストにある英単語を使った例文を、日常会話で使えるレベルで1つずつ作ってほしい。単語・例文・日本語訳をセットにした単語帳の形式にまとめてほしい。
+```
+
+### 94. プログラミング学習の演習問題解説
+職種: 学生・学習者 ｜ 場面: 演習問題でつまずいたコードの意味を理解したいとき
+```text
+このコードがなぜエラーになるのか、初心者にも分かる言葉で説明してほしい。答えだけ直すのではなく、どう考えれば自分で直せるようになるかのヒントも教えてほしい。
+```
+
+### 95. 就活用の自己PR・ESの下書き作成
+職種: 学生・学習者 ｜ 場面: エントリーシートの自己PR欄を書くとき
+```text
+この経験のメモをもとに、自己PRの下書きを作ってほしい。エピソード・そこから学んだこと・入社後にどう活かすかの3段構成にしてほしい。誇張した表現は避けてほしい。
+```
+
+### 96. 研究データの整理とグラフ化準備
+職種: 学生・学習者 ｜ 場面: 卒業研究や実験のデータをまとめるとき
+```text
+この実験データのCSVを、グラフにしやすい形に整理してほしい。測定条件ごとに列を分けて、平均値の列も追加してほしい。
+```
+
+### 97. @webで論文・一次情報を調べてまとめる
+職種: 学生・学習者 ｜ 場面: レポートや研究のために先行研究を調べるとき
+```text
+このテーマに関する信頼できる情報源を @web で調べてほしい。見つかった情報は出典付きで、要点を箇条書きにまとめてほしい。
+```
+
+### 98. 卒論・レポートの誤字脱字チェック
+職種: 学生・学習者 ｜ 場面: 提出前の最終確認をするとき
+```text
+この卒論原稿の誤字脱字と、数字や図表番号の整合性をチェックしてほしい。修正が必要そうな箇所を一覧にして教えてほしい。文章の内容自体は変えないでほしい。
+```
+
+### 99. 学習計画表・スケジュール管理シート作成
+職種: 学生・学習者 ｜ 場面: 試験や資格取得に向けて計画を立てるとき
+```text
+試験日までの残り期間と、これから勉強する範囲のメモを渡すので、週単位の学習計画表を作ってほしい。無理のないペース配分と、復習の時間も組み込んでほしい。
+```
+
+### 100. 資格試験の暗記カード(Q&amp;A形式)自動生成
+職種: 学生・学習者 ｜ 場面: 暗記が必要な範囲を効率よく反復学習したいとき
+```text
+このテキストの範囲から、資格試験対策用の一問一答形式の暗記カードを作ってほしい。問題と答えをセットにして、間違えやすそうなポイントには補足説明も添えてほしい。
+```
+</pre>
+<footer>各項目のコピーボタンで1つずつ受け取れます。まとめて欲しいときは上の「全件ダウンロード」から。<br>GitHubの <a href="./kit/jobs-100.md">kit/jobs-100.md</a> からも受け取れます。</footer></div>
+<script>
+function copyTextWithFallback(text){function fallback(){try{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();return ok;}catch(e){return false;}}if(navigator.clipboard&&navigator.clipboard.writeText){return navigator.clipboard.writeText(text).then(()=>true).catch(fallback);}return Promise.resolve(fallback());}
+function showCopyResult(btn,ok){const orig=btn.dataset.orig||btn.textContent;btn.dataset.orig=orig;btn.textContent=ok?'✔ コピーしました！':'✖ コピー不可。⬇ ダウンロードをご利用ください';setTimeout(()=>{btn.textContent=orig;},ok?1800:3500);}
+async function copyPrompt(id,btn){const ok=await copyTextWithFallback(document.getElementById(id).textContent);showCopyResult(btn,ok);}
+function downloadText(id,filename,btn){try{const text=document.getElementById(id).textContent;const blob=new Blob([text],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);}catch(e){if(btn){const o=btn.textContent;btn.textContent='✖ 保存不可。上のコピーをご利用ください';setTimeout(()=>{btn.textContent=o;},3500);}}}
+</script></body></html>
